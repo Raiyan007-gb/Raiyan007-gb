@@ -94,7 +94,10 @@
          font-size: 14px; line-height: 1.55; word-wrap: break-word; }
   .msg.user { align-self: flex-end; background: #1b2b28; border: 1px solid rgba(94,234,212,.35); }
   .msg.bot { align-self: flex-start; background: var(--panel-2); border: 1px solid var(--border); }
-  .msg.bot a { color: var(--teal); }
+  .msg.bot a, .msg.bot a:visited,
+  .keybar a, .keybar a:visited,
+  footer a, footer a:visited { color: var(--teal); }
+  .msg.bot a:hover, .keybar a:hover, footer a:hover { text-decoration: underline; }
   .msg pre {
     background: #080a0e; border: 1px solid var(--border); border-radius: 6px;
     padding: 10px; margin: 8px 0; overflow-x: auto;
@@ -229,10 +232,29 @@ function render(md) {
   return html;
 }
 
+/* Places the blinking cursor directly after the last visible letter,
+   even inside nested <p>/<li>/<code>/<a> elements — never on its own line. */
+function attachCursor(div) {
+  div.querySelectorAll(".cursor").forEach((c) => c.remove());
+  const cursor = document.createElement("span");
+  cursor.className = "cursor";
+  const walker = document.createTreeWalker(div, NodeFilter.SHOW_TEXT);
+  let last = null, n;
+  while ((n = walker.nextNode())) {
+    if (n.nodeValue.trim() !== "") last = n;
+  }
+  if (last && last.parentNode) {
+    last.parentNode.insertBefore(cursor, last.nextSibling);
+  } else {
+    div.appendChild(cursor);
+  }
+}
+
 function addMsg(role, text) {
   const div = document.createElement("div");
   div.className = "msg " + role;
-  div.innerHTML = render(text) + (role === "bot" ? '<span class="cursor"></span>' : "");
+  div.innerHTML = render(text);
+  if (role === "bot") attachCursor(div);
   log.appendChild(div);
   log.scrollTop = log.scrollHeight;
   return div;
@@ -290,7 +312,8 @@ async function send(text) {
           const delta = JSON.parse(d).choices?.[0]?.delta?.content || "";
           if (delta) {
             reply += delta;
-            botDiv.innerHTML = render(reply) + '<span class="cursor"></span>';
+            botDiv.innerHTML = render(reply);
+            attachCursor(botDiv);
             log.scrollTop = log.scrollHeight;
           }
         } catch (e) { /* partial chunk, ignore */ }
