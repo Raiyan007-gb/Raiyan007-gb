@@ -86,7 +86,7 @@ $ raiyan --status --now
 | Project | What it is | Stack | Status | Links |
 |---|---|---|---|---|
 | **Long-context LLM inference** | Qwen3.8-27B served with 262K context, tuned batching and GPU utilization on RTX 6000-class Slurm hardware | vLLM · SGLang · BF16 · CUDA · Slurm | Active R&D | Private infra |
-| **U-LENS / UBL Admin Platform** | Production admin portal: dashboards, attendance, POSM inventory + town/CM summaries, SKU reporting, PJP upload, large-scale reporting on live databases | MongoDB aggregation · AWS · S3 · WAF · Firebase · caching | Production | [module](https://github.com/Raiyan007-gb/u-lens-salary-module) |
+| **U-LENS / UBL Admin Platform** | Production admin portal: dashboards, attendance, POSM inventory + town/CM summaries, SKU reporting, PJP upload, large-scale reporting on live databases | MongoDB aggregation · AWS · S3 · WAF · Firebase · caching | Production | Private production system |
 | **AI surveillance / CV platform** | RTSP camera networks → PoE → local GPU inference → analytics → web dashboard; CV/AI lead on enterprise systems | Python · RTSP · GPU inference · dashboards | Production | Private systems |
 | **Bangla AI + speech** | Bangla Smart Home Assistant, Bangla STT/TTS research, Whisper fine-tuning, Bangla–English RAG with evaluation | Whisper · FAISS · LangChain · Flask | Active R&D | [rag](https://github.com/Raiyan007-gb/multilingual_rag_system_md._shoaib_ahmed) |
 | **Agentic dev environment** | A2S multi-agent message bus + canonical `~/.agents` harness manager (Tauri/Rust) + Claude Code skills + npm-source CLI for coding agents | MCP · Rust · Tauri · Python | Active | [agentmesh](https://github.com/Raiyan007-gb/agentmesh) · [relays](https://github.com/Raiyan007-gb/relays) · [skills](https://github.com/Raiyan007-gb/skills) · [opensrc](https://github.com/Raiyan007-gb/opensrc) |
@@ -214,9 +214,11 @@ quantum computing + AI · large-scale deployment · multimodal AI · speech AI.
 | **Agents & tooling** | Claude Code · Cursor · OpenCode · MCP · LSP · sub-agent architectures · model routing |
 | **Backend** | Python · FastAPI · Flask · Node.js |
 | **Frontend** | Next.js · React · TypeScript · Tailwind CSS |
+| **Mobile** | Flutter |
+| **AI** | LLMs · agents · speech · vision · RAG |
 | **Infra & cloud** | Docker · Nginx · AWS (S3 · WAF) · Vercel · Firebase · Slurm · Linux |
 | **Data** | MongoDB · large-scale aggregation · caching · batch processing |
-| **CV** | RTSP · real-time video · local GPU inference · analytics dashboards |
+| **CV** | RTSP · YOLO · real-time video · local GPU inference · analytics dashboards |
 
 ---
 
