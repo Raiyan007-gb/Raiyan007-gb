@@ -16,6 +16,8 @@
 
 > AI Systems Engineer · LLM Infrastructure · Agentic AI · Computer Vision
 
+**Director of Engineering · Senior AI Lead — The Data Island**
+
 I build and deploy AI systems end to end — from GPU-level inference and agent
 infrastructure to computer-vision platforms and production applications.
 Models are the starting point. What I care about is everything after:
@@ -27,6 +29,12 @@ serving, latency, memory, tool use, integration, reliability, production.
 [![Research](https://img.shields.io/badge/Paper-EMNLP_2026-7b2cbf?style=for-the-badge)](https://arxiv.org/abs/2606.17506)
 [![Email](https://img.shields.io/badge/Email-Contact-teal?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raiyan2025@gmail.com)
 [![AI Chat](https://img.shields.io/badge/AI_Chat-Ask_about_me-5eead4?style=for-the-badge&logo=openai&logoColor=white)](https://raiyan007-gb.github.io/Raiyan007-gb/chat.html)
+
+<br>
+
+<img src="assets/nsu-logo.png" width="150" alt="North South University">
+
+*Graduate — [North South University](https://www.northsouth.edu/), Dhaka, Bangladesh*
 
 </div>
 
