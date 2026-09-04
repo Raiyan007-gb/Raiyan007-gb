@@ -10,11 +10,10 @@ Models are the starting point. What I care about is everything after:
 serving, latency, memory, tool use, integration, reliability, production.
 
 [![GitHub](https://img.shields.io/badge/GitHub-Raiyan007--gb-black?style=for-the-badge&logo=github)](https://github.com/Raiyan007-gb)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/)
-[![Research](https://img.shields.io/badge/Research-EMNLP_2026-7b2cbf?style=for-the-badge)](https://2026.emnlp.org/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Raiyan_Ahmed-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/raiyan-ahmed-20488b120/)
+[![Scholar](https://img.shields.io/badge/Google_Scholar-Citations-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=NjO557sAAAAJ&hl=en)
+[![Research](https://img.shields.io/badge/Paper-EMNLP_2026-7b2cbf?style=for-the-badge)](https://arxiv.org/abs/2606.17506)
 [![Email](https://img.shields.io/badge/Email-Contact-teal?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raiyan2025@gmail.com)
-
-*LinkedIn / portfolio links are placeholders — replace with exact URLs.*
 
 </div>
 
@@ -69,7 +68,7 @@ serving, latency, memory, tool use, integration, reliability, production.
 | **Bangla AI + speech** | Bangla Smart Home Assistant, Bangla STT/TTS research, Whisper fine-tuning, Bangla–English RAG with evaluation | Whisper · FAISS · LangChain · Flask | Active R&D | [rag](https://github.com/Raiyan007-gb/multilingual_rag_system_md._shoaib_ahmed) |
 | **Agentic dev environment** | A2S multi-agent message bus + canonical `~/.agents` harness manager (Tauri/Rust) + Claude Code skills + npm-source CLI for coding agents | MCP · Rust · Tauri · Python | Active | [agentmesh](https://github.com/Raiyan007-gb/agentmesh) · [relays](https://github.com/Raiyan007-gb/relays) · [skills](https://github.com/Raiyan007-gb/skills) · [opensrc](https://github.com/Raiyan007-gb/opensrc) |
 | **AI Photodrive** | AI-assisted photo/drive platform (API + frontends + Runpod pipelines) | Python · TypeScript · notebooks | Production | Private system |
-| **LTIC-Herb** | 3-stage CLIP-ViT long-tail classifier, SOTA on Herbarium 2021/2022 (IJCNN 2025) | PyTorch · CLIP-ViT · transformers | Published | [repo](https://github.com/Raiyan007-gb/LTIC-Herb) |
+| **LTIC-Herb** | 3-stage CLIP-ViT long-tail classifier, SOTA on Herbarium 2021/2022 (IJCNN 2025) | PyTorch · CLIP-ViT · transformers | Published | [repo](https://github.com/Raiyan007-gb/LTIC-Herb) · [paper](https://ieeexplore.ieee.org/abstract/document/11228538/) |
 | **SSH Transfer Pro** | DevOps desktop app: SSH/SFTP browser, Tar/SFTP/SCP engines, native terminal launcher, signed installers | Electron · ssh2 · NSIS | Released | [repo](https://github.com/Raiyan007-gb/SSH-Transfer-Pro) · [download](https://github.com/Raiyan007-gb/SSH-Transfer-Pro/releases/tag/v2.8.4) |
 
 ---
@@ -158,17 +157,17 @@ AI systems that work in Bangla — speech first.
 
 > **Research accepted at EMNLP 2026.**
 >
-> - Paper title: *TODO — fill in exact title*
-> - Paper link: *TODO*
-> - arXiv: *TODO*
-> - Code: *TODO*
-> - Dataset: *TODO*
+> **Evaluating Second-Order Bias of LLMs Through Epistemic Entitlement**
+> Ramaravind Kommiya Mothilal · Terry Jingchen Zhang · **Raiyan Ahmed** · Zhijing Jin · Shion Guha · Syed Ishtiaque Ahmed
+>
+> - arXiv: [2606.17506](https://arxiv.org/abs/2606.17506)
+> - Code / dataset: *TODO — add links when public*
 
 Related published / prototype research:
 
 | Work | Area | Links |
 |---|---|---|
-| **LTIC-Herb** — long-tail herbarium classification (IJCNN 2025) | Vision · transformers | [repo](https://github.com/Raiyan007-gb/LTIC-Herb) |
+| **LTIC-Herb** — long-tail herbarium classification (IJCNN 2025) | Vision · transformers | [repo](https://github.com/Raiyan007-gb/LTIC-Herb) · [ieee](https://ieeexplore.ieee.org/abstract/document/11228538/) |
 | **HAF** — faithfulness of toxicity explanations in LLMs | LLM evaluation | [repo](https://github.com/Raiyan007-gb/HAF) |
 | **AmbiGuard** — sandbox for reflective evaluation of AI safety guardrails | AI safety | [repo](https://github.com/Raiyan007-gb/ambiguard) · [demo](https://uofthcdslab.github.io/ambiguard/) |
 
