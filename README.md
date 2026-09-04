@@ -22,7 +22,7 @@ serving, latency, memory, tool use, integration, reliability, production.
 [![Scholar](https://img.shields.io/badge/Google_Scholar-Citations-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=NjO557sAAAAJ&hl=en)
 [![Research](https://img.shields.io/badge/Paper-EMNLP_2026-7b2cbf?style=for-the-badge)](https://arxiv.org/abs/2606.17506)
 [![Email](https://img.shields.io/badge/Email-Contact-teal?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raiyan2025@gmail.com)
-[![AI Chat](https://img.shields.io/badge/AI_Chat-Ask_about_me-5eead4?style=for-the-badge&logo=openai&logoColor=white)](https://raiyan007-gb.github.io/chat.html)
+[![AI Chat](https://img.shields.io/badge/AI_Chat-Ask_about_me-5eead4?style=for-the-badge&logo=openai&logoColor=white)](https://raiyan007-gb.github.io/Raiyan007-gb/chat.html)
 
 </div>
 
