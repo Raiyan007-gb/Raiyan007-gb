@@ -232,12 +232,10 @@ Production AI Systems
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=Raiyan007-gb&show_icons=true&theme=dark&hide_border=true)
 ![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Raiyan007-gb&layout=compact&theme=dark&hide_border=true)
 
-<!-- lowlighter/metrics visuals (shared instance, zero setup).
-     Upgrade path: run the metrics GitHub Action in this repo for full
-     plugins + no dependency on the shared instance. See:
-     https://github.com/lowlighter/metrics -->
-![Isometric commit calendar](https://metrics.lecoq.io/Raiyan007-gb?template=classic&isocalendar=1&isocalendar.duration=half-year)
-![Achievements](https://metrics.lecoq.io/Raiyan007-gb?template=classic&achievements=1&achievements.display=compact&achievements.threshold=C)
+<!-- lowlighter/metrics visuals, rendered by .github/workflows/metrics.yml
+     (daily + on demand). Needs a METRICS_TOKEN repo secret to run. -->
+![Isometric commit calendar](metrics-isocalendar.svg)
+![Achievements](metrics-achievements.svg)
 
 </div>
 
