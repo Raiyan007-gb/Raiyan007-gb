@@ -203,6 +203,16 @@ function render(md) {
     .replace(/`([^`\n]+)`/g, "<code>$1</code>")
     .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
     .replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  /* Auto-link bare URLs, skipping anything already inside HTML tags */
+  out = out.split(/(<[^>]*>)/g).map((part, i) => {
+    if (i % 2 === 1) return part;
+    return part.replace(/https?:\/\/[^\s<)"']+/g, (url) => {
+      let clean = url, trail = "";
+      const m = url.match(/^(.*?)([.,;:!?]+|\)+)$/);
+      if (m && (m[2][0] !== ")" || !m[1].includes("("))) { clean = m[1]; trail = m[2]; }
+      return `<a href="${clean}" target="_blank" rel="noopener">${clean}</a>` + trail;
+    });
+  }).join("");
   const lines = out.split("\n");
   let html = "", inList = false;
   for (const ln of lines) {
