@@ -25,12 +25,12 @@ infrastructure to computer-vision platforms and production applications.
 Models are the starting point. What I care about is everything after:
 serving, latency, memory, tool use, integration, reliability, production.
 
+[![AI Chat](https://img.shields.io/badge/AI_Chat-Ask_about_me-5eead4?style=for-the-badge&logo=openai&logoColor=white)](https://raiyan007-gb.github.io/Raiyan007-gb/chat.html)
 [![GitHub](https://img.shields.io/badge/GitHub-Raiyan007--gb-black?style=for-the-badge&logo=github)](https://github.com/Raiyan007-gb)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Raiyan_Ahmed-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/raiyan-ahmed-20488b120/)
 [![Scholar](https://img.shields.io/badge/Google_Scholar-Citations-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=NjO557sAAAAJ&hl=en)
 [![Research](https://img.shields.io/badge/Paper-EMNLP_2026-7b2cbf?style=for-the-badge)](https://arxiv.org/abs/2606.17506)
 [![Email](https://img.shields.io/badge/Email-Contact-teal?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raiyan2025@gmail.com)
-[![AI Chat](https://img.shields.io/badge/AI_Chat-Ask_about_me-5eead4?style=for-the-badge&logo=openai&logoColor=white)](https://raiyan007-gb.github.io/Raiyan007-gb/chat.html)
 
 <br>
 
@@ -275,7 +275,7 @@ Production AI Systems
 END OF TRANSMISSION // SYSTEM OPERATIONAL
 ```
 
-*Source · Logs · Terminal — all systems above are live links.*
+[Source](https://github.com/Raiyan007-gb) · [Terminal](https://raiyan007-gb.github.io/Raiyan007-gb/chat.html) — all systems above are live links.
 
 **Building at the intersection of AI × agents × LLM infrastructure × computer vision × production engineering × research.**
 
