@@ -35,6 +35,78 @@ FACTS (do not invent anything beyond this):
 
 RULES: never invent repositories, stars, metrics, benchmarks, paper titles, employers, dates, numbers, companies, or URLs. If asked about something not covered here, say you don't have that information and suggest emailing raiyan2025@gmail.com.`;
 
+/* ── Live public-repo fetch (idea C) ────────────────────────────────
+ * ONLY these public repos can ever be fetched — the allowlist is the
+ * privacy guarantee. A visitor naming a private repo simply matches
+ * nothing, and the model falls back to the static brief above. */
+const PUBLIC_REPOS = {
+  "agentmesh": ["agentmesh", "a2s", "multi-agent"],
+  "relays": ["relays", "harness manager"],
+  "skills": ["agent skill", "skills repo"],
+  "opensrc": ["opensrc"],
+  "LTIC-Herb": ["ltic", "herbarium", "herb"],
+  "HAF": ["haf", "toxicity explanation"],
+  "ambiguard": ["ambiguard", "guardrail"],
+  "multilingual_rag_system_md._shoaib_ahmed": ["multilingual rag", "bangla rag"],
+  "u-lens-salary-module": ["u-lens", "ulens", "ubl", "salary module"],
+  "SSH-Transfer-Pro": ["ssh transfer", "ssh-transfer"],
+  "MatraAgenticBot2025": ["matra"],
+  "tdi_lead_sync_agent": ["lead sync"],
+};
+const MAX_LIVE_REPOS = 2;      // repos injected per request
+const LIVE_CACHE_TTL = 3600000; // 1 hour
+const README_CHARS = 2500;
+
+const liveCache = new Map(); // repo -> { at, block } (per-isolate memory)
+
+function detectRepos(question) {
+  const q = (question || "").toLowerCase();
+  const hits = [];
+  for (const [repo, keywords] of Object.entries(PUBLIC_REPOS)) {
+    if (keywords.some((k) => q.includes(k))) hits.push(repo);
+    if (hits.length >= MAX_LIVE_REPOS) break;
+  }
+  return hits;
+}
+
+async function fetchRepoBlock(repo, env) {
+  const now = Date.now();
+  const cached = liveCache.get(repo);
+  if (cached && now - cached.at < LIVE_CACHE_TTL) return cached.block;
+
+  const headers = {
+    Accept: "application/vnd.github.raw",
+    "User-Agent": "raiyan-chat-proxy",
+  };
+  if (env.GITHUB_TOKEN) headers.Authorization = "Bearer " + env.GITHUB_TOKEN;
+
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 8000);
+  try {
+    const [readmeRes, metaRes] = await Promise.all([
+      fetch(`https://api.github.com/repos/Raiyan007-gb/${repo}/readme`, { headers, signal: ctrl.signal }),
+      fetch(`https://api.github.com/repos/Raiyan007-gb/${repo}`, {
+        headers: { ...headers, Accept: "application/vnd.github+json" },
+        signal: ctrl.signal,
+      }),
+    ]);
+    if (!readmeRes.ok || !metaRes.ok) return "";
+    const readme = (await readmeRes.text()).slice(0, README_CHARS);
+    const meta = await metaRes.json();
+    const block =
+      `[LIVE GitHub data — Raiyan007-gb/${repo} — ` +
+      `★${meta.stargazers_count ?? "?"} · ${meta.language ?? "?"} · ` +
+      `updated ${(meta.pushed_at || "?").slice(0, 10)}]\n` +
+      `${meta.description || ""}\n${readme}`;
+    liveCache.set(repo, { at: now, block });
+    return block;
+  } catch {
+    return ""; // rate limit, timeout, offline — fall back to static brief
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 const CORS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
@@ -65,6 +137,19 @@ export default {
       .map((m) => ({ role: m.role, content: m.content.slice(0, MAX_INPUT_CHARS) }))
       .slice(-MAX_HISTORY);
 
+    // Live public-repo injection: if the latest question names an allowlisted
+    // repo, fetch its fresh README + metadata and staple it to the prompt.
+    const lastUser = [...trimmed].reverse().find((m) => m.role === "user");
+    let system = SYSTEM_PROMPT;
+    if (lastUser) {
+      const blocks = (
+        await Promise.all(detectRepos(lastUser.content).map((r) => fetchRepoBlock(r, env)))
+      ).filter(Boolean);
+      if (blocks.length) {
+        system += "\n\nLIVE REPO DATA (fresh from GitHub — prefer over static facts):\n" + blocks.join("\n\n---\n\n");
+      }
+    }
+
     const upstream = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -76,7 +161,7 @@ export default {
       body: JSON.stringify({
         model: MODEL,
         stream: true,
-        messages: [{ role: "system", content: SYSTEM_PROMPT }, ...trimmed],
+        messages: [{ role: "system", content: system }, ...trimmed],
       }),
     });
 
