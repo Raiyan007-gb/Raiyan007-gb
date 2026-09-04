@@ -1,5 +1,7 @@
 # lowlighter/metrics — renders profile SVGs and commits them to this repo.
-# Needs a `METRICS_TOKEN` repo secret (scope-less classic PAT is enough).
+# Needs a `METRICS_TOKEN` repo secret holding a CLASSIC personal access
+# token (fine-grained tokens are rejected by the metrics action).
+# No scopes required.
 # Runs daily + on demand via "Run workflow". No push trigger (avoids loops).
 name: Metrics
 on:
