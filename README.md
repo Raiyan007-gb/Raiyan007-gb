@@ -1,6 +1,14 @@
 <div align="center">
 
-# Raiyan Ahmed
+```
+ ____      _    _____   __ _    _   _
+|  _ \    / \  |_ _\ \ / // \  | \ | |
+| |_) |  / _ \  | | \ V // _ \ |  \| |
+|  _ <  / ___ \ | |  | |/ ___ \| |\  |
+|_| \_\/_/   \_\___| |_/_/   \_\_| \_|
+
+          A H M E D  ·  AI SYSTEMS
+```
 
 **AI Systems Engineer · LLM Infrastructure · Agentic AI · Computer Vision**
 
@@ -21,13 +29,14 @@ serving, latency, memory, tool use, integration, reliability, production.
 
 ## Currently Building
 
-| # | Track | Focus |
-|---|-------|-------|
-| **01** | **Long-context LLM infrastructure** | Qwen3.8-27B on vLLM · 200K+ context · BF16 · GPU memory optimization |
-| **02** | **Agentic development** | Claude Code · MCP · LSP · sub-agents · autonomous debugging workflows |
-| **03** | **Production AI systems** | Enterprise AI · computer vision · analytics · backend platforms |
-| **04** | **Bangla AI** | Speech recognition · TTS · intelligent assistants |
-| **05** | **AI research** | EMNLP 2026 and continued work on modern AI systems |
+```text
+$ raiyan --status --now
+● llm-infra   :: Qwen3.8-27B · vLLM · 256K ctx · BF16 · GPU tuning
+● agents      :: Claude Code · MCP/LSP · sub-agents · auto-debug
+● production  :: U-LENS · CV platforms · analytics backends
+● speech      :: Bangla STT/TTS · Whisper tuning · assistants
+● research    :: EMNLP 2026 · efficient inference · multimodal
+```
 
 ---
 
