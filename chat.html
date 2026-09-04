@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask about Raiyan Ahmed — AI Chat</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0e13'/><text x='50' y='70' font-size='54' text-anchor='middle' fill='%235eead4' font-family='monospace'>&gt;_</text></svg>">
+<style>
+  :root {
+    --bg: #0b0e13;
+    --panel: #11141b;
+    --panel-2: #161a23;
+    --border: #232936;
+    --text: #e6e9f0;
+    --muted: #8b93a7;
+    --teal: #5eead4;
+    --teal-dim: rgba(94, 234, 212, 0.12);
+    --gold: #f7bd4f;
+    --red: #ff8a8a;
+    --radius: 10px;
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 24px 16px 40px;
+  }
+  .app { width: 100%; max-width: 760px; display: flex; flex-direction: column; gap: 14px; }
+  header {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+  }
+  .avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: linear-gradient(135deg, #1d2025, #0b0e13);
+    border: 1px solid var(--teal);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-weight: 700; color: var(--teal);
+    font-size: 18px; flex-shrink: 0;
+  }
+  .title h1 { font-size: 16px; font-weight: 650; }
+  .title p { font-size: 12px; color: var(--muted); font-family: var(--mono); margin-top: 2px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal);
+         box-shadow: 0 0 8px var(--teal); margin-left: auto; flex-shrink: 0; }
+  .dot.busy { background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+  .keybar {
+    display: flex; gap: 8px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 10px 12px;
+    font-size: 12px; color: var(--muted);
+    align-items: center; flex-wrap: wrap;
+  }
+  .keybar input {
+    flex: 1; min-width: 180px;
+    background: var(--bg); color: var(--text);
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 7px 10px; font-family: var(--mono); font-size: 12px;
+    outline: none;
+  }
+  .keybar input:focus { border-color: var(--teal); }
+  .keybar a { color: var(--teal); text-decoration: none; }
+  .btn {
+    background: var(--teal-dim); color: var(--teal);
+    border: 1px solid var(--teal); border-radius: 6px;
+    padding: 7px 12px; font-size: 12px; font-weight: 600;
+    cursor: pointer; font-family: var(--font); white-space: nowrap;
+  }
+  .btn:hover { background: rgba(94, 234, 212, 0.22); }
+  .btn.ghost { background: transparent; color: var(--muted); border-color: var(--border); }
+  .btn.ghost:hover { color: var(--text); border-color: var(--muted); }
+  .btn:disabled { opacity: 0.5; cursor: default; }
+  #log {
+    display: flex; flex-direction: column; gap: 10px;
+    min-height: 300px; max-height: 55vh; overflow-y: auto;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+  }
+  #log::-webkit-scrollbar { width: 6px; }
+  #log::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  .msg { max-width: 92%; padding: 10px 13px; border-radius: var(--radius);
+         font-size: 14px; line-height: 1.55; word-wrap: break-word; }
+  .msg.user { align-self: flex-end; background: #1b2b28; border: 1px solid rgba(94,234,212,.35); }
+  .msg.bot { align-self: flex-start; background: var(--panel-2); border: 1px solid var(--border); }
+  .msg.bot a { color: var(--teal); }
+  .msg pre {
+    background: #080a0e; border: 1px solid var(--border); border-radius: 6px;
+    padding: 10px; margin: 8px 0; overflow-x: auto;
+    font-family: var(--mono); font-size: 12.5px;
+  }
+  .msg code { font-family: var(--mono); font-size: 12.5px; background: #080a0e;
+              padding: 1px 5px; border-radius: 4px; }
+  .msg pre code { background: none; padding: 0; }
+  .msg ul { margin: 6px 0 6px 18px; }
+  .msg p + p { margin-top: 8px; }
+  .cursor { display: inline-block; width: 8px; height: 15px; background: var(--teal);
+            vertical-align: -2px; animation: blink 0.8s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    background: var(--panel); border: 1px solid var(--border); color: var(--muted);
+    border-radius: 20px; padding: 6px 13px; font-size: 12.5px; cursor: pointer;
+  }
+  .chip:hover { color: var(--teal); border-color: var(--teal); }
+  .composer { display: flex; gap: 8px; }
+  .composer textarea {
+    flex: 1; resize: none; height: 46px;
+    background: var(--panel); color: var(--text);
+    border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 12px 14px; font-family: var(--font); font-size: 14px; outline: none;
+  }
+  .composer textarea:focus { border-color: var(--teal); }
+  .composer .btn { padding: 0 20px; font-size: 14px; border-radius: var(--radius); }
+  .err {
+    background: rgba(255,138,138,.08); border: 1px solid var(--red); color: var(--red);
+    border-radius: var(--radius); padding: 10px 13px; font-size: 13px; display: none;
+  }
+  footer { text-align: center; font-size: 11.5px; color: var(--muted); font-family: var(--mono); }
+  footer a { color: var(--teal); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="avatar">&gt;_</div>
+    <div class="title">
+      <h1>Ask about Raiyan Ahmed</h1>
+      <p id="model-label">openrouter/free · streaming</p>
+    </div>
+    <div class="dot" id="dot" title="idle"></div>
+  </header>
+
+  <div class="keybar">
+    <span>OpenRouter key:</span>
+    <input type="password" id="key" placeholder="sk-or-v1-… (stored only in this browser)" autocomplete="off">
+    <button class="btn" id="save-key">Save</button>
+    <button class="btn ghost" id="clear-key">Forget</button>
+    <span>Get a free key at <a href="https://openrouter.ai/keys" target="_blank" rel="noopener">openrouter.ai/keys</a></span>
+  </div>
+
+  <div class="err" id="err"></div>
+  <div id="log"></div>
+
+  <div class="chips" id="chips">
+    <button class="chip">What LLM infrastructure do you run?</button>
+    <button class="chip">Show me the agentic AI projects</button>
+    <button class="chip">What Bangla AI work exists?</button>
+    <button class="chip">Tell me about the research</button>
+  </div>
+
+  <div class="composer">
+    <textarea id="input" placeholder="Ask anything about Raiyan's work… (Enter to send)" rows="1"></textarea>
+    <button class="btn" id="send">Send</button>
+    <button class="btn ghost" id="stop" disabled>Stop</button>
+  </div>
+
+  <footer>answers generated from public profile info · may be incomplete — verify via
+    <a href="https://github.com/Raiyan007-gb">github</a></footer>
+</div>
+
+<script>
+"use strict";
+/* ── Config (edit these two lines to change endpoint/model) ── */
+const BASE_URL = "https://openrouter.ai/api/v1";
+const MODEL = "openrouter/free";
+const SITE_URL = "https://raiyan007-gb.github.io/chat.html";
+const SITE_NAME = "Ask about Raiyan Ahmed";
+
+const SYSTEM_PROMPT = `You are the AI representative of Raiyan Ahmed, an AI Systems Engineer. Answer questions about his work, projects, research, and tech stack. Be concise, technical, and understated. Use short paragraphs or bullets and include relevant links as markdown links.
+
+FACTS (do not invent anything beyond this):
+- Roles: AI Systems Engineer; works across AI/ML, LLM infrastructure and inference, agentic AI, computer vision, AI research, production backends, full-stack, developer tooling, GPU infrastructure, speech AI, Bangla AI.
+- LLM infrastructure: serves Qwen3.8-27B with vLLM/SGLang at 256K context (MAX_MODEL_LEN=262144), batched concurrency (MAX_NUM_SEQS=32), high GPU utilization (0.90+), BF16 inference, quantization/FP4 experiments, CUDA troubleshooting, Slurm clusters, RTX 6000-class GPUs.
+- Agentic AI: agentmesh (https://github.com/Raiyan007-gb/agentmesh) — multi-agent message bus over MCP; relays (https://github.com/Raiyan007-gb/relays) — canonical agent-harness manager in Tauri/Rust; skills (https://github.com/Raiyan007-gb/skills) — Claude Code skill collection; opensrc (https://github.com/Raiyan007-gb/opensrc) — Rust CLI giving coding agents package sources. Uses Claude Code, Cursor, OpenCode, MCP, LSP, sub-agents, model routing.
+- Production: U-LENS / UBL Admin Platform — dashboards, attendance, POSM inventory and summaries, SKU reporting, PJP upload, MongoDB aggregation, AWS/S3/WAF, Firebase, caching. Module repo: https://github.com/Raiyan007-gb/u-lens-salary-module
+- Computer vision: RTSP camera networks over PoE to local GPU inference, analytics, web dashboards; CV/AI lead on enterprise systems.
+- Bangla AI: Bangla Smart Home Assistant, Bangla STT/TTS, Whisper fine-tuning, Bangla-English RAG: https://github.com/Raiyan007-gb/multilingual_rag_system_md._shoaib_ahmed
+- Research: EMNLP 2026 paper "Evaluating Second-Order Bias of LLMs Through Epistemic Entitlement" (Mothilal, Zhang, Ahmed, Jin, Guha, Ahmed), arXiv https://arxiv.org/abs/2606.17506; LTIC-Herb herbarium classifier, IJCNN 2025, repo https://github.com/Raiyan007-gb/LTIC-Herb, IEEE https://ieeexplore.ieee.org/abstract/document/11228538/; HAF toxicity-explanation work https://github.com/Raiyan007-gb/HAF; AmbiGuard safety sandbox https://github.com/Raiyan007-gb/ambiguard.
+- DevOps app: SSH Transfer Pro https://github.com/Raiyan007-gb/SSH-Transfer-Pro (release https://github.com/Raiyan007-gb/SSH-Transfer-Pro/releases/tag/v2.8.4).
+- Stack: PyTorch, Transformers, ONNX, Whisper, vLLM, SGLang, Qwen, OpenRouter; Python, FastAPI, Flask, Node.js; Next.js, React, TypeScript, Tailwind; Docker, Nginx, AWS, Vercel, Firebase, Slurm, Linux; MongoDB.
+- Links: GitHub https://github.com/Raiyan007-gb, LinkedIn https://www.linkedin.com/in/raiyan-ahmed-20488b120/, Scholar https://scholar.google.com/citations?user=NjO557sAAAAJ&hl=en, email raiyan2025@gmail.com.
+
+RULES: never invent repositories, stars, metrics, benchmarks, paper titles, companies, or URLs. If asked about something not covered here, say you don't have that information and suggest emailing raiyan2025@gmail.com.`;
+
+const log = document.getElementById("log");
+const input = document.getElementById("input");
+const sendBtn = document.getElementById("send");
+const stopBtn = document.getElementById("stop");
+const errBox = document.getElementById("err");
+const dot = document.getElementById("dot");
+const keyInput = document.getElementById("key");
+document.getElementById("model-label").textContent = MODEL + " · streaming";
+
+let history = [{ role: "system", content: SYSTEM_PROMPT }];
+let aborter = null;
+
+keyInput.value = localStorage.getItem("or_chat_key") || "";
+document.getElementById("save-key").onclick = () => {
+  localStorage.setItem("or_chat_key", keyInput.value.trim());
+  showErr("");
+};
+document.getElementById("clear-key").onclick = () => {
+  localStorage.removeItem("or_chat_key");
+  keyInput.value = "";
+};
+
+function showErr(msg) {
+  errBox.style.display = msg ? "block" : "none";
+  errBox.textContent = msg;
+}
+
+function esc(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+/* Minimal markdown: fences, inline code, bold, links, lists, paragraphs */
+function render(md) {
+  const fences = [];
+  let out = esc(md).replace(/```(\w*)\n([\s\S]*?)(```|$)/g, (m, lang, code) => {
+    fences.push("<pre><code>" + code.replace(/\n$/, "") + "</code></pre>");
+    return "\u0000" + (fences.length - 1) + "\u0000";
+  });
+  out = out
+    .replace(/`([^`\n]+)`/g, "<code>$1</code>")
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  const lines = out.split("\n");
+  let html = "", inList = false;
+  for (const ln of lines) {
+    if (/^\s*[-*] /.test(ln)) {
+      if (!inList) { html += "<ul>"; inList = true; }
+      html += "<li>" + ln.replace(/^\s*[-*] /, "") + "</li>";
+    } else {
+      if (inList) { html += "</ul>"; inList = false; }
+      html += ln.trim() ? "<p>" + ln + "</p>" : "";
+    }
+  }
+  if (inList) html += "</ul>";
+  html = html.replace(/\u0000(\d+)\u0000/g, (m, i) => fences[+i] || "");
+  return html;
+}
+
+function addMsg(role, text) {
+  const div = document.createElement("div");
+  div.className = "msg " + role;
+  div.innerHTML = render(text) + (role === "bot" ? '<span class="cursor"></span>' : "");
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+  return div;
+}
+
+function setBusy(b) {
+  dot.classList.toggle("busy", b);
+  sendBtn.disabled = b;
+  stopBtn.disabled = !b;
+}
+
+async function send(text) {
+  const q = (text !== undefined ? text : input.value).trim();
+  if (!q || aborter) return;
+  const key = (localStorage.getItem("or_chat_key") || "").trim();
+  if (!key) {
+    showErr("Add your OpenRouter API key above first (free at openrouter.ai/keys). It never leaves your browser except to api.openrouter.ai.");
+    return;
+  }
+  showErr("");
+  input.value = "";
+  addMsg("user", q);
+  history.push({ role: "user", content: q });
+
+  const botDiv = addMsg("bot", "");
+  setBusy(true);
+  aborter = new AbortController();
+  let reply = "";
+
+  try {
+    const resp = await fetch(BASE_URL + "/chat/completions", {
+      method: "POST",
+      signal: aborter.signal,
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + key,
+        "HTTP-Referer": SITE_URL,
+        "X-Title": SITE_NAME,
+      },
+      body: JSON.stringify({ model: MODEL, stream: true, messages: history }),
+    });
+    if (!resp.ok) {
+      const t = await resp.text();
+      throw new Error(resp.status === 401
+        ? "Invalid API key (401). Check the key saved above."
+        : "OpenRouter error " + resp.status + ": " + t.slice(0, 200));
+    }
+    const reader = resp.body.getReader();
+    const dec = new TextDecoder();
+    let buf = "";
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, { stream: true });
+      const parts = buf.split("\n");
+      buf = parts.pop();
+      for (const line of parts) {
+        const t = line.trim();
+        if (!t.startsWith("data:")) continue;
+        const d = t.slice(5).trim();
+        if (d === "[DONE]") break;
+        try {
+          const delta = JSON.parse(d).choices?.[0]?.delta?.content || "";
+          if (delta) {
+            reply += delta;
+            botDiv.innerHTML = render(reply) + '<span class="cursor"></span>';
+            log.scrollTop = log.scrollHeight;
+          }
+        } catch (e) { /* partial chunk, ignore */ }
+      }
+    }
+  } catch (e) {
+    if (e.name === "AbortError") reply += "\n\n*(stopped)*";
+    else { showErr(String(e.message || e)); botDiv.remove(); setBusy(false); aborter = null; return; }
+  }
+  botDiv.innerHTML = render(reply);
+  log.scrollTop = log.scrollHeight;
+  history.push({ role: "assistant", content: reply });
+  setBusy(false);
+  aborter = null;
+}
+
+sendBtn.onclick = () => send();
+stopBtn.onclick = () => { if (aborter) aborter.abort(); };
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); }
+});
+document.getElementById("chips").addEventListener("click", (e) => {
+  if (e.target.classList.contains("chip")) send(e.target.textContent);
+});
+
+addMsg("bot", "Hi — I can answer questions about **Raiyan Ahmed's** work: LLM infrastructure, agentic AI, production systems, computer vision, Bangla AI, and research. Add your free OpenRouter key above and ask away.");
+</script>
+</body>
+</html>
