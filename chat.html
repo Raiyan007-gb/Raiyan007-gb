@@ -137,7 +137,7 @@
     <div class="avatar">&gt;_</div>
     <div class="title">
       <h1>Ask about Raiyan Ahmed</h1>
-      <p id="model-label">openrouter/free · streaming</p>
+      <p id="model-label">online · streaming</p>
     </div>
     <div class="dot" id="dot" title="idle"></div>
   </header>
@@ -170,8 +170,6 @@
 "use strict";
 /* ── Config: paste your deployed worker URL here (see worker.js) ── */
 const WORKER_URL = "https://raiyan-chat.raiyan2025.workers.dev";
-const MODEL = "openrouter/free";
-document.getElementById("model-label").textContent = MODEL + " · streaming";
 
 const log = document.getElementById("log");
 const input = document.getElementById("input");
@@ -297,6 +295,7 @@ async function send(text) {
   history.push({ role: "assistant", content: reply });
   setBusy(false);
   aborter = null;
+  input.focus();
 }
 
 sendBtn.onclick = () => send();
@@ -309,6 +308,7 @@ document.getElementById("chips").addEventListener("click", (e) => {
 });
 
 addMsg("bot", "Hi — I can answer questions about **Raiyan Ahmed's** work: LLM infrastructure, agentic AI, production systems, computer vision, Bangla AI, and research. Just ask.");
+input.focus();
 </script>
 </body>
 </html>
