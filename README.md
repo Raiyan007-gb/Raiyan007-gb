@@ -34,8 +34,8 @@ serving, latency, memory, tool use, integration, reliability, production.
 
 [![Chat with my AI — live demo](assets/chat-preview.png)](https://raiyan007-gb.github.io/Raiyan007-gb/chat.html)
 
-*Click to open the live chat — answers questions about my work, streamed via OpenRouter.
-Bring your own free API key; it never leaves your browser.*
+*Click to open the live chat — answers questions about my work, streamed via OpenRouter
+through a secure proxy. No key needed.*
 
 </div>
 
