@@ -1,5 +1,11 @@
 <div align="center">
 
+```text
+> handshake github.com/Raiyan007-gb ............ OK
+> loading profile v3 ........................... OK
+> status ....................................... ONLINE
+```
+
 ```
  ____      _    _____   __ _    _   _
 |  _ \    / \  |_ _\ \ / // \  | \ | |
@@ -28,20 +34,22 @@ serving, latency, memory, tool use, integration, reliability, production.
 
 ---
 
-## Ask my AI
+## ◢ 00 // OPEN CHANNEL
+
+> Live interface into everything below. Ask about the work, the stack, the research — streamed, keyless.
 
 <div align="center">
 
-[![Chat with my AI — live demo](assets/chat-preview.png)](https://raiyan007-gb.github.io/Raiyan007-gb/chat.html)
+[![Launch the AI interface](assets/chat-preview.png)](https://raiyan007-gb.github.io/Raiyan007-gb/chat.html)
 
-*Click to open the live chat — answers questions about my work, streamed via OpenRouter
-through a secure proxy. No key needed.*
+*Click to open — answers stream via OpenRouter through a secure proxy.
+Reads live public repo data on demand. No key needed.*
 
 </div>
 
 ---
 
-## Currently Building
+## ◢ 01 // LIVE OPERATIONS
 
 ```text
 $ raiyan --status --now
@@ -54,7 +62,7 @@ $ raiyan --status --now
 
 ---
 
-## Engineering Focus
+## ◢ 02 // CAPABILITY MATRIX
 
 <table>
 <tr>
@@ -81,9 +89,9 @@ $ raiyan --status --now
 
 ---
 
-## Featured Work
+## ◢ 03 // DEPLOYED SYSTEMS
 
-| Project | What it is | Stack | Status | Links |
+| System | Function | Stack | State | Access |
 |---|---|---|---|---|
 | **Long-context LLM inference** | Qwen3.8-27B served with 262K context, tuned batching and GPU utilization on RTX 6000-class Slurm hardware | vLLM · SGLang · BF16 · CUDA · Slurm | Active R&D | Private infra |
 | **U-LENS / UBL Admin Platform** | Production admin portal: dashboards, attendance, POSM inventory + town/CM summaries, SKU reporting, PJP upload, large-scale reporting on live databases | MongoDB aggregation · AWS · S3 · WAF · Firebase · caching | Production | Private production system |
@@ -96,7 +104,7 @@ $ raiyan --status --now
 
 ---
 
-## LLM Infrastructure
+## ◢ 04 // INFERENCE CORE
 
 I work on the infrastructure side of modern LLMs — not just API calls.
 
@@ -122,7 +130,7 @@ Slurm-based clusters · large-memory inference environments.
 
 ---
 
-## Agentic AI
+## ◢ 05 // AGENT LAYER
 
 I build systems where AI interacts with and operates software — not chatbots
 around it, but agents inside the loop.
@@ -145,7 +153,7 @@ Concrete pieces, all open source:
 
 ---
 
-## Computer Vision
+## ◢ 06 // OPTICS · COMPUTER VISION
 
 Real-time video systems with local GPU inference — cameras to dashboard.
 
@@ -165,7 +173,7 @@ Published CV research alongside the production work:
 
 ---
 
-## Bangla AI
+## ◢ 07 // VOICE · BANGLA AI
 
 AI systems that work in Bangla — speech first.
 
@@ -176,7 +184,7 @@ AI systems that work in Bangla — speech first.
 
 ---
 
-## Research
+## ◢ 08 // RESEARCH LOG
 
 > **Research accepted at EMNLP 2026.**
 >
@@ -206,7 +214,7 @@ quantum computing + AI · large-scale deployment · multimodal AI · speech AI.
 
 ---
 
-## Stack
+## ◢ 09 // ARSENAL
 
 | Layer | Technologies |
 |---|---|
@@ -222,7 +230,7 @@ quantum computing + AI · large-scale deployment · multimodal AI · speech AI.
 
 ---
 
-## Engineering Philosophy
+## ◢ 10 // DOCTRINE
 
 I don't just experiment with models. I care about what happens
 **after the model works**: deployment, latency, memory, throughput,
@@ -230,7 +238,7 @@ tool use, observability, integration, reliability, production.
 
 ---
 
-## Evolution
+## ◢ 11 // EVOLUTION PATH
 
 ```
 Software Engineering
@@ -250,23 +258,29 @@ Production AI Systems
 
 ---
 
-## Activity
+## ◢ 12 // TELEMETRY
 
 <div align="center">
 
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=Raiyan007-gb&show_icons=true&theme=dark&hide_border=true)
 ![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Raiyan007-gb&layout=compact&theme=dark&hide_border=true)
 
-<!-- lowlighter/metrics visuals, rendered by .github/workflows/metrics.yml
-     (daily + on demand). Needs a METRICS_TOKEN repo secret to run. -->
+<!-- lowlighter/metrics renders (isocalendar + achievements) live in
+     .github/workflows/metrics.yml — add a METRICS_TOKEN repo secret and run
+     the Metrics workflow, then uncomment:
 ![Isometric commit calendar](metrics-isocalendar.svg)
 ![Achievements](metrics-achievements.svg)
+-->
 
 </div>
 
 ---
 
 <div align="center">
+
+```text
+// END OF TRANSMISSION
+```
 
 **Building at the intersection of AI × agents × LLM infrastructure × computer vision × production engineering × research.**
 
