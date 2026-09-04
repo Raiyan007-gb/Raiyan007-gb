@@ -16,7 +16,9 @@
 
 > AI Systems Engineer · LLM Infrastructure · Agentic AI · Computer Vision
 
-**Director of Engineering · Senior AI Lead — The Data Island**
+<img src="assets/tdi-logo.png" width="190" alt="The Data Island">
+
+**Director of Engineering · Senior AI Lead — [The Data Island](https://www.thedataisland.com/)**
 
 I build and deploy AI systems end to end — from GPU-level inference and agent
 infrastructure to computer-vision platforms and production applications.
