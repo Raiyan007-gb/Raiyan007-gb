@@ -95,9 +95,11 @@
   .msg.user { align-self: flex-end; background: #1b2b28; border: 1px solid rgba(94,234,212,.35); }
   .msg.bot { align-self: flex-start; background: var(--panel-2); border: 1px solid var(--border); }
   .msg.bot a, .msg.bot a:visited,
+  .msg.user a, .msg.user a:visited,
   .keybar a, .keybar a:visited,
   footer a, footer a:visited { color: var(--teal); }
-  .msg.bot a:hover, .keybar a:hover, footer a:hover { color: var(--teal); text-decoration: underline; }
+  .msg.bot a:hover, .msg.user a:hover,
+  .keybar a:hover, footer a:hover { color: var(--teal); text-decoration: underline; }
   .msg pre {
     background: #080a0e; border: 1px solid var(--border); border-radius: 6px;
     padding: 10px; margin: 8px 0; overflow-x: auto;
