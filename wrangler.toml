@@ -1,0 +1,6 @@
+# Cloudflare Worker config for the "Ask about Raiyan" chat proxy.
+# The OpenRouter key is NOT stored here — it is published as an encrypted
+# Worker secret from the OPENROUTER_KEY repo secret by deploy-proxy.yml.
+name = "raiyan-chat"
+main = "worker.js"
+compatibility_date = "2026-09-04"
