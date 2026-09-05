@@ -32,34 +32,61 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 
 > **Everything after the model works is the actual job.**
 
+## Stack
+
+**AI / ML**
+![AI/ML](https://skillicons.dev/icons?i=py,pytorch&theme=dark)
+*also: Transformers · ONNX · Whisper · vLLM · SGLang · Qwen · OpenRouter · YOLO*
+
+**Agents & tooling**
+Claude Code · Cursor · OpenCode · MCP · LSP · sub-agents · model routing
+
+**Backend & data**
+![Backend](https://skillicons.dev/icons?i=fastapi,flask,nodejs,express,mongodb&theme=dark)
+
+**Frontend & mobile**
+![Frontend](https://skillicons.dev/icons?i=nextjs,react,ts,js,tailwind,html,css,flutter,dart&theme=dark)
+
+**Desktop & systems**
+![Systems](https://skillicons.dev/icons?i=rust,tauri,electron&theme=dark)
+
+**Infra & cloud**
+![Infra](https://skillicons.dev/icons?i=docker,nginx,aws,cloudflare,firebase,vercel,git,github,githubactions,linux,bash,npm,pnpm&theme=dark)
+*also: Slurm · S3 · WAF · MongoDB aggregation · caching*
+
+**Computer vision**
+RTSP · YOLO · real-time video pipelines · local GPU inference
+
+---
+
 ## What I do
 
 <table width="100%">
 <tr align="center">
 <td width="25%">
 
-**🧠 AI Systems**
+**AI Systems**
 
 <sub>LLM-powered software, end to end</sub>
 
 </td>
 <td width="25%">
 
-**⚙️ LLM Infrastructure**
+**LLM Infrastructure**
 
 <sub>Inference, serving, optimization</sub>
 
 </td>
 <td width="25%">
 
-**🤖 Agentic AI**
+**Agentic AI**
 
 <sub>Agents that operate software</sub>
 
 </td>
 <td width="25%">
 
-**👁️ Computer Vision**
+**Computer Vision**
 
 <sub>Real-time video, local inference</sub>
 
@@ -68,28 +95,28 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 <tr align="center">
 <td>
 
-**🎙️ Speech AI**
+**Speech AI**
 
 <sub>STT / TTS, Whisper tuning</sub>
 
 </td>
 <td>
 
-**💬 Bangla AI**
+**Bangla AI**
 
 <sub>AI that works in Bangla, not just English</sub>
 
 </td>
 <td>
 
-**🔧 Backend Engineering**
+**Backend Engineering**
 
 <sub>APIs, data pipelines, scale</sub>
 
 </td>
 <td>
 
-**🖥️ Full-Stack Systems**
+**Full-Stack Systems**
 
 <sub>Next.js + FastAPI production apps</sub>
 
@@ -98,28 +125,28 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 <tr align="center">
 <td>
 
-**⚡️ GPU Computing**
+**GPU Computing**
 
 <sub>CUDA, Slurm clusters, memory tuning</sub>
 
 </td>
 <td>
 
-**🔬 Research**
+**Research**
 
 <sub>EMNLP 2026 · IJCNN 2025 · LLM evaluation</sub>
 
 </td>
 <td>
 
-**☁️ Production Infrastructure**
+**Production Infrastructure**
 
 <sub>AWS, caching, observability</sub>
 
 </td>
 <td>
 
-**🧰 Developer Tooling**
+**Developer Tooling**
 
 <sub>MCP servers, agent skills, CLIs</sub>
 
@@ -268,27 +295,6 @@ Additional production areas: Bangla Smart Home Assistant · Bangla speech recogn
 Large language models, model architecture, efficient inference, AI systems, quantum computing and AI, large-scale deployment, multimodal AI, speech AI.
 
 </details>
-
-## Stack
-
-**AI / ML**
-![PyTorch](https://img.shields.io/badge/PyTorch-17212B?style=flat-square&logo=pytorch&logoColor=3E8E7E) ![Transformers](https://img.shields.io/badge/Transformers-17212B?style=flat-square&logo=huggingface&logoColor=3E8E7E) ![ONNX](https://img.shields.io/badge/ONNX-17212B?style=flat-square&logo=onnx&logoColor=3E8E7E) ![Whisper](https://img.shields.io/badge/Whisper-17212B?style=flat-square) ![vLLM](https://img.shields.io/badge/vLLM-17212B?style=flat-square) ![SGLang](https://img.shields.io/badge/SGLang-17212B?style=flat-square) ![Qwen](https://img.shields.io/badge/Qwen-17212B?style=flat-square) ![OpenRouter](https://img.shields.io/badge/OpenRouter-17212B?style=flat-square)
-
-**Agents & tooling**
-![Claude Code](https://img.shields.io/badge/Claude_Code-17212B?style=flat-square) ![Cursor](https://img.shields.io/badge/Cursor-17212B?style=flat-square) ![OpenCode](https://img.shields.io/badge/OpenCode-17212B?style=flat-square) ![MCP](https://img.shields.io/badge/MCP-17212B?style=flat-square) ![LSP](https://img.shields.io/badge/LSP-17212B?style=flat-square)
-
-**Backend & data**
-![Python](https://img.shields.io/badge/Python-17212B?style=flat-square&logo=python&logoColor=3E8E7E) ![FastAPI](https://img.shields.io/badge/FastAPI-17212B?style=flat-square&logo=fastapi&logoColor=3E8E7E) ![Flask](https://img.shields.io/badge/Flask-17212B?style=flat-square&logo=flask&logoColor=3E8E7E) ![Node.js](https://img.shields.io/badge/Node.js-17212B?style=flat-square&logo=nodedotjs&logoColor=3E8E7E) ![MongoDB](https://img.shields.io/badge/MongoDB-17212B?style=flat-square&logo=mongodb&logoColor=3E8E7E)
-
-**Frontend & mobile**
-![Next.js](https://img.shields.io/badge/Next.js-17212B?style=flat-square&logo=nextdotjs&logoColor=3E8E7E) ![React](https://img.shields.io/badge/React-17212B?style=flat-square&logo=react&logoColor=3E8E7E) ![TypeScript](https://img.shields.io/badge/TypeScript-17212B?style=flat-square&logo=typescript&logoColor=3E8E7E) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-17212B?style=flat-square&logo=tailwindcss&logoColor=3E8E7E) ![Flutter](https://img.shields.io/badge/Flutter-17212B?style=flat-square&logo=flutter&logoColor=3E8E7E)
-
-**Infra & cloud**
-![Docker](https://img.shields.io/badge/Docker-17212B?style=flat-square&logo=docker&logoColor=3E8E7E) ![Nginx](https://img.shields.io/badge/Nginx-17212B?style=flat-square&logo=nginx&logoColor=3E8E7E) ![AWS](https://img.shields.io/badge/AWS-17212B?style=flat-square&logo=amazonaws&logoColor=3E8E7E) ![Vercel](https://img.shields.io/badge/Vercel-17212B?style=flat-square&logo=vercel&logoColor=3E8E7E) ![Firebase](https://img.shields.io/badge/Firebase-17212B?style=flat-square&logo=firebase&logoColor=3E8E7E) ![Slurm](https://img.shields.io/badge/Slurm-17212B?style=flat-square) ![Linux](https://img.shields.io/badge/Linux-17212B?style=flat-square&logo=linux&logoColor=3E8E7E)
-
-*(AWS here spans S3 and WAF · U-Lens also layers in request caching on top of MongoDB aggregation.)*
-
-**Computer vision** — YOLO · RTSP · real-time video pipelines · local GPU inference
 
 ## Philosophy
 
