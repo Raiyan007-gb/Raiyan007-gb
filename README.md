@@ -174,7 +174,7 @@ RTSP · YOLO · real-time video pipelines · local GPU inference
 <tr>
 <td width="33%" valign="top">
 
-<img src="https://github.com/Raiyan007-gb/dsh-remote-tunnel-easy/raw/main/assets/logo.svg" width="240" alt="dsh-remote-tunnel-easy logo" />
+<img src="https://github.com/Raiyan007-gb/dsh-remote-tunnel-easy/raw/main/assets/logo.svg" width="340" alt="dsh-remote-tunnel-easy logo" />
 
 **[dsh-remote-tunnel-easy](https://github.com/Raiyan007-gb/dsh-remote-tunnel-easy)**
 
