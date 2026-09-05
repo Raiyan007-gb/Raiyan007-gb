@@ -75,7 +75,7 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 </td>
 <td>
 
-**🇧🇩 Bangla AI**
+**💬 Bangla AI**
 
 <sub>AI that works in Bangla, not just English</sub>
 
@@ -98,7 +98,7 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 <tr align="center">
 <td>
 
-**⚡ GPU Computing**
+**⚡️ GPU Computing**
 
 <sub>CUDA, Slurm clusters, memory tuning</sub>
 
