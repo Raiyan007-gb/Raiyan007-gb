@@ -2,7 +2,13 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:17212B,100:3E8E7E&height=180&section=header&text=Raiyan%20Ahmed&fontSize=40&fontColor=F5F5F5&fontAlignY=35&animation=fadeIn&desc=AI%20Systems%20Engineer%20%C2%B7%20LLM%20Infrastructure%20%C2%B7%20Agentic%20AI&descAlignY=62&descSize=16&descColor=F5F5F5" width="100%" alt="Raiyan Ahmed" />
 
-**Director of Engineering · Senior AI Lead** at [The Data Island](https://www.thedataisland.com/) · graduate of [North South University](https://www.northsouth.edu/), Dhaka
+<img src="assets/tdi-logo.png" width="190" alt="The Data Island">
+
+**Director of Engineering · Senior AI Lead — [The Data Island](https://www.thedataisland.com/)**
+
+<img src="assets/nsu-logo.png" width="150" alt="North South University">
+
+*Graduate — [North South University](https://www.northsouth.edu/), Dhaka, Bangladesh*
 
 <img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=15&pause=1400&color=3E8E7E&center=true&vCenter=true&width=680&lines=Building+AI+systems+end+to+end+%E2%80%94+GPU+to+production;Long-context+inference+%C2%B7+agentic+tooling+%C2%B7+computer+vision;Bangla+speech+%26+language+AI+%C2%B7+published+researcher" alt="what I work on" />
 
@@ -50,6 +56,37 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 - Fine-tuning Whisper and building Bangla–English RAG for Bangla speech and language AI
 - Running CV analytics on live RTSP camera networks for enterprise deployments
 - Co-author on an EMNLP 2026 paper on second-order bias in LLM epistemic judgments
+
+<!-- Highlights: keep exactly 2 cards, always the 2 projects most recently pushed to.
+     Pull each project's own logo straight from its repo (assets/logo.svg, assets/logo.png,
+     or an icon referenced in its README) when one exists; if a project has no logo, drop the
+     image and keep the text cell. Swap cards out as newer pushes replace these. -->
+## Highlights
+
+*What I've pushed to most recently.*
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<img src="https://github.com/Raiyan007-gb/dsh-remote-tunnel-easy/raw/main/assets/logo.svg" width="180" alt="dsh-remote-tunnel-easy logo" />
+
+**[dsh-remote-tunnel-easy](https://github.com/Raiyan007-gb/dsh-remote-tunnel-easy)**
+
+QR-code remote handoff for DeepSeek Harness: scan a code in Settings and your phone opens the same live session through a Cloudflare quick tunnel, no database, no app install. `v1.4.2`
+
+</td>
+<td width="50%" valign="top">
+
+<img src="https://github.com/Raiyan007-gb/relays/raw/main/src-tauri/icons/icon.png" width="120" alt="relays logo" />
+
+**[relays](https://github.com/Raiyan007-gb/relays)**
+
+One canonical `~/.agents` store for every AI harness — Claude Code, Cursor, Codex, OpenCode, Kiro — wired into each via junctions/symlinks from a single Tauri desktop app. In active development.
+
+</td>
+</tr>
+</table>
 
 ## Flagship systems
 
