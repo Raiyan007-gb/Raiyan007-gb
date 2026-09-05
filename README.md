@@ -35,28 +35,104 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 ## Stack
 
 **AI / ML**
-<img src="assets/icons/tile-python.svg" width="48" alt="Python"> <img src="assets/icons/tile-pytorch.svg" width="48" alt="PyTorch"> <img src="assets/icons/tile-nvidia.svg" width="48" alt="NVIDIA CUDA"> <img src="assets/icons/tile-jupyter.svg" width="48" alt="Jupyter"> <img src="assets/icons/tile-huggingface.svg" width="48" alt="HuggingFace Transformers"> <img src="assets/icons/tile-onnx.svg" width="48" alt="ONNX"> <img src="assets/icons/tile-vllm.png" width="48" alt="vLLM"> <img src="assets/icons/tile-sglang.svg" width="48" alt="SGLang"> <img src="assets/icons/tile-qwen.svg" width="48" alt="Qwen"> <img src="assets/icons/tile-openrouter.svg" width="48" alt="OpenRouter">
-*also: Transformers · Whisper · YOLO*
+<table>
+<tr>
+<td align="center" width="96"><img src="assets/icons/tile-python.svg" width="48" alt="Python"><br><sub>Python</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-pytorch.svg" width="48" alt="PyTorch"><br><sub>PyTorch</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-nvidia.svg" width="48" alt="NVIDIA"><br><sub>NVIDIA</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-jupyter.svg" width="48" alt="Jupyter"><br><sub>Jupyter</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-huggingface.svg" width="48" alt="HuggingFace"><br><sub>HuggingFace</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-onnx.svg" width="48" alt="ONNX"><br><sub>ONNX</sub></td>
+</tr>
+<tr>
+<td align="center" width="96"><img src="assets/icons/tile-vllm.png" width="48" alt="vLLM"><br><sub>vLLM</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-sglang.svg" width="48" alt="SGLang"><br><sub>SGLang</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-qwen.svg" width="48" alt="Qwen"><br><sub>Qwen</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-openrouter.svg" width="48" alt="OpenRouter"><br><sub>OpenRouter</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-ultralytics.svg" width="48" alt="Ultralytics"><br><sub>Ultralytics</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-openai.svg" width="48" alt="OpenAI"><br><sub>OpenAI</sub></td>
+</tr>
+</table>
+*also: Transformers · Whisper*
 
 **Agents & tooling**
-<img src="assets/icons/tile-claude.svg" width="48" alt="Claude"> <img src="assets/icons/tile-cursor.svg" width="48" alt="Cursor"> <img src="assets/icons/tile-mcp.svg" width="48" alt="MCP">
+<table>
+<tr>
+<td align="center" width="96"><img src="assets/icons/tile-anthropic.svg" width="48" alt="Claude"><br><sub>Claude</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-cursor.svg" width="48" alt="Cursor"><br><sub>Cursor</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-mcp.svg" width="48" alt="MCP"><br><sub>MCP</sub></td>
+</tr>
+</table>
 Claude Code · Cursor · OpenCode · MCP · LSP · sub-agents · model routing
 
 **Backend & data**
-<img src="assets/icons/tile-fastapi.svg" width="48" alt="FastAPI"> <img src="assets/icons/tile-flask.svg" width="48" alt="Flask"> <img src="assets/icons/tile-nodedotjs.svg" width="48" alt="Node.js"> <img src="assets/icons/tile-express.svg" width="48" alt="Express"> <img src="assets/icons/tile-mongodb.svg" width="48" alt="MongoDB">
+<table>
+<tr>
+<td align="center" width="96"><img src="assets/icons/tile-fastapi.svg" width="48" alt="FastAPI"><br><sub>FastAPI</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-flask.svg" width="48" alt="Flask"><br><sub>Flask</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-nodedotjs.svg" width="48" alt="Node.js"><br><sub>Node.js</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-express.svg" width="48" alt="Express"><br><sub>Express</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-mongodb.svg" width="48" alt="MongoDB"><br><sub>MongoDB</sub></td>
+</tr>
+</table>
 
 **Frontend & mobile**
-<img src="assets/icons/tile-nextdotjs.svg" width="48" alt="Next.js"> <img src="assets/icons/tile-react.svg" width="48" alt="React"> <img src="assets/icons/tile-typescript.svg" width="48" alt="TypeScript"> <img src="assets/icons/tile-javascript.svg" width="48" alt="JavaScript"> <img src="assets/icons/tile-tailwindcss.svg" width="48" alt="Tailwind CSS"> <img src="assets/icons/tile-html5.svg" width="48" alt="HTML5"> <img src="assets/icons/tile-css.svg" width="48" alt="CSS"> <img src="assets/icons/tile-flutter.svg" width="48" alt="Flutter"> <img src="assets/icons/tile-dart.svg" width="48" alt="Dart">
+<table>
+<tr>
+<td align="center" width="96"><img src="assets/icons/tile-nextjs.svg" width="48" alt="Next.js"><br><sub>Next.js</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-react.svg" width="48" alt="React"><br><sub>React</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-typescript.svg" width="48" alt="TypeScript"><br><sub>TypeScript</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-javascript.svg" width="48" alt="JavaScript"><br><sub>JavaScript</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-tailwindcss.svg" width="48" alt="Tailwind"><br><sub>Tailwind</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-html5.svg" width="48" alt="HTML5"><br><sub>HTML5</sub></td>
+</tr>
+<tr>
+<td align="center" width="96"><img src="assets/icons/tile-css.svg" width="48" alt="CSS"><br><sub>CSS</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-flutter.svg" width="48" alt="Flutter"><br><sub>Flutter</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-dart.svg" width="48" alt="Dart"><br><sub>Dart</sub></td>
+</tr>
+</table>
 
 **Desktop & systems**
-<img src="assets/icons/tile-rust.svg" width="48" alt="Rust"> <img src="assets/icons/tile-tauri.svg" width="48" alt="Tauri"> <img src="assets/icons/tile-electron.svg" width="48" alt="Electron">
+<table>
+<tr>
+<td align="center" width="96"><img src="assets/icons/tile-rust.svg" width="48" alt="Rust"><br><sub>Rust</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-tauri.svg" width="48" alt="Tauri"><br><sub>Tauri</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-electron.svg" width="48" alt="Electron"><br><sub>Electron</sub></td>
+</tr>
+</table>
 
 **Infra & cloud**
-<img src="assets/icons/tile-docker.svg" width="48" alt="Docker"> <img src="assets/icons/tile-nginx.svg" width="48" alt="Nginx"> <img src="assets/icons/tile-cloudflare.svg" width="48" alt="Cloudflare"> <img src="assets/icons/tile-firebase.svg" width="48" alt="Firebase"> <img src="assets/icons/tile-vercel.svg" width="48" alt="Vercel"> <img src="assets/icons/tile-git.svg" width="48" alt="Git"> <img src="assets/icons/tile-github.svg" width="48" alt="GitHub"> <img src="assets/icons/tile-githubactions.svg" width="48" alt="GitHub Actions"> <img src="assets/icons/tile-linux.svg" width="48" alt="Linux"> <img src="assets/icons/tile-gnubash.svg" width="48" alt="Bash"> <img src="assets/icons/tile-npm.svg" width="48" alt="npm"> <img src="assets/icons/tile-pnpm.svg" width="48" alt="pnpm"> <img src="assets/icons/tile-slurm.png" width="48" alt="Slurm">
+<table>
+<tr>
+<td align="center" width="96"><img src="assets/icons/tile-docker.svg" width="48" alt="Docker"><br><sub>Docker</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-nginx.svg" width="48" alt="Nginx"><br><sub>Nginx</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-cloudflare.svg" width="48" alt="Cloudflare"><br><sub>Cloudflare</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-firebase.svg" width="48" alt="Firebase"><br><sub>Firebase</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-vercel.svg" width="48" alt="Vercel"><br><sub>Vercel</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-git.svg" width="48" alt="Git"><br><sub>Git</sub></td>
+</tr>
+<tr>
+<td align="center" width="96"><img src="assets/icons/tile-github.svg" width="48" alt="GitHub"><br><sub>GitHub</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-githubactions.svg" width="48" alt="Actions"><br><sub>Actions</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-linux.svg" width="48" alt="Linux"><br><sub>Linux</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-gnubash.svg" width="48" alt="Bash"><br><sub>Bash</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-npm.svg" width="48" alt="npm"><br><sub>npm</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-pnpm.svg" width="48" alt="pnpm"><br><sub>pnpm</sub></td>
+</tr>
+<tr>
+<td align="center" width="96"><img src="assets/icons/tile-slurm.png" width="48" alt="Slurm"><br><sub>Slurm</sub></td>
+</tr>
+</table>
 *also: AWS · S3 · WAF · MongoDB aggregation · caching*
 
 **Computer vision**
-<img src="assets/icons/tile-opencv.svg" width="48" alt="OpenCV"> <img src="assets/icons/tile-ultralytics.svg" width="48" alt="Ultralytics YOLO">
+<table>
+<tr>
+<td align="center" width="96"><img src="assets/icons/tile-opencv.svg" width="48" alt="OpenCV"><br><sub>OpenCV</sub></td>
+<td align="center" width="96"><img src="assets/icons/tile-ultralytics.svg" width="48" alt="YOLO"><br><sub>YOLO</sub></td>
+</tr>
+</table>
 RTSP · real-time video pipelines · local GPU inference
 
 ## What I do
