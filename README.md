@@ -35,32 +35,29 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 ## Stack
 
 **AI / ML**
-![AI/ML](https://skillicons.dev/icons?i=py,pytorch&theme=dark)
-<img src="assets/icons/tile-huggingface.svg" width="48" alt="HuggingFace Transformers"> <img src="assets/icons/tile-onnx.svg" width="48" alt="ONNX"> <img src="assets/icons/tile-vllm.png" width="48" alt="vLLM"> <img src="assets/icons/tile-sglang.svg" width="48" alt="SGLang"> <img src="assets/icons/tile-qwen.svg" width="48" alt="Qwen"> <img src="assets/icons/tile-openrouter.svg" width="48" alt="OpenRouter">
-*also: Whisper*
+<img src="assets/icons/tile-python.svg" width="48" alt="Python"> <img src="assets/icons/tile-pytorch.svg" width="48" alt="PyTorch"> <img src="assets/icons/tile-nvidia.svg" width="48" alt="NVIDIA CUDA"> <img src="assets/icons/tile-jupyter.svg" width="48" alt="Jupyter"> <img src="assets/icons/tile-huggingface.svg" width="48" alt="HuggingFace Transformers"> <img src="assets/icons/tile-onnx.svg" width="48" alt="ONNX"> <img src="assets/icons/tile-vllm.png" width="48" alt="vLLM"> <img src="assets/icons/tile-sglang.svg" width="48" alt="SGLang"> <img src="assets/icons/tile-qwen.svg" width="48" alt="Qwen"> <img src="assets/icons/tile-openrouter.svg" width="48" alt="OpenRouter">
+*also: Transformers · Whisper · YOLO*
 
 **Agents & tooling**
 <img src="assets/icons/tile-claude.svg" width="48" alt="Claude"> <img src="assets/icons/tile-cursor.svg" width="48" alt="Cursor"> <img src="assets/icons/tile-mcp.svg" width="48" alt="MCP">
 Claude Code · Cursor · OpenCode · MCP · LSP · sub-agents · model routing
 
 **Backend & data**
-![Backend](https://skillicons.dev/icons?i=fastapi,flask,nodejs,express,mongodb&theme=dark)
+<img src="assets/icons/tile-fastapi.svg" width="48" alt="FastAPI"> <img src="assets/icons/tile-flask.svg" width="48" alt="Flask"> <img src="assets/icons/tile-nodedotjs.svg" width="48" alt="Node.js"> <img src="assets/icons/tile-express.svg" width="48" alt="Express"> <img src="assets/icons/tile-mongodb.svg" width="48" alt="MongoDB">
 
 **Frontend & mobile**
-![Frontend](https://skillicons.dev/icons?i=nextjs,react,ts,js,tailwind,html,css,flutter,dart&theme=dark)
+<img src="assets/icons/tile-nextdotjs.svg" width="48" alt="Next.js"> <img src="assets/icons/tile-react.svg" width="48" alt="React"> <img src="assets/icons/tile-typescript.svg" width="48" alt="TypeScript"> <img src="assets/icons/tile-javascript.svg" width="48" alt="JavaScript"> <img src="assets/icons/tile-tailwindcss.svg" width="48" alt="Tailwind CSS"> <img src="assets/icons/tile-html5.svg" width="48" alt="HTML5"> <img src="assets/icons/tile-css.svg" width="48" alt="CSS"> <img src="assets/icons/tile-flutter.svg" width="48" alt="Flutter"> <img src="assets/icons/tile-dart.svg" width="48" alt="Dart">
 
 **Desktop & systems**
-![Systems](https://skillicons.dev/icons?i=rust,tauri,electron&theme=dark)
+<img src="assets/icons/tile-rust.svg" width="48" alt="Rust"> <img src="assets/icons/tile-tauri.svg" width="48" alt="Tauri"> <img src="assets/icons/tile-electron.svg" width="48" alt="Electron">
 
 **Infra & cloud**
-![Infra](https://skillicons.dev/icons?i=docker,nginx,aws,cloudflare,firebase,vercel,git,github,githubactions,linux,bash,npm,pnpm&theme=dark)
-<img src="assets/icons/tile-slurm.png" width="48" alt="Slurm">
-*also: S3 · WAF · MongoDB aggregation · caching*
+<img src="assets/icons/tile-docker.svg" width="48" alt="Docker"> <img src="assets/icons/tile-nginx.svg" width="48" alt="Nginx"> <img src="assets/icons/tile-cloudflare.svg" width="48" alt="Cloudflare"> <img src="assets/icons/tile-firebase.svg" width="48" alt="Firebase"> <img src="assets/icons/tile-vercel.svg" width="48" alt="Vercel"> <img src="assets/icons/tile-git.svg" width="48" alt="Git"> <img src="assets/icons/tile-github.svg" width="48" alt="GitHub"> <img src="assets/icons/tile-githubactions.svg" width="48" alt="GitHub Actions"> <img src="assets/icons/tile-linux.svg" width="48" alt="Linux"> <img src="assets/icons/tile-gnubash.svg" width="48" alt="Bash"> <img src="assets/icons/tile-npm.svg" width="48" alt="npm"> <img src="assets/icons/tile-pnpm.svg" width="48" alt="pnpm"> <img src="assets/icons/tile-slurm.png" width="48" alt="Slurm">
+*also: AWS · S3 · WAF · MongoDB aggregation · caching*
 
 **Computer vision**
-![CV](https://skillicons.dev/icons?i=opencv&theme=dark)
-<img src="assets/icons/tile-ultralytics.svg" width="48" alt="Ultralytics YOLO">
-RTSP · YOLO · OpenCV · real-time video pipelines · local GPU inference
+<img src="assets/icons/tile-opencv.svg" width="48" alt="OpenCV"> <img src="assets/icons/tile-ultralytics.svg" width="48" alt="Ultralytics YOLO">
+RTSP · real-time video pipelines · local GPU inference
 
 ## What I do
 
