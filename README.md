@@ -36,9 +36,11 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 
 **AI / ML**
 ![AI/ML](https://skillicons.dev/icons?i=py,pytorch&theme=dark)
-*also: Transformers · ONNX · Whisper · vLLM · SGLang · Qwen · OpenRouter · YOLO*
+<img src="assets/icons/tile-huggingface.svg" width="48" alt="HuggingFace Transformers"> <img src="assets/icons/tile-onnx.svg" width="48" alt="ONNX"> <img src="assets/icons/tile-vllm.png" width="48" alt="vLLM"> <img src="assets/icons/tile-sglang.svg" width="48" alt="SGLang"> <img src="assets/icons/tile-qwen.svg" width="48" alt="Qwen"> <img src="assets/icons/tile-openrouter.svg" width="48" alt="OpenRouter"> <img src="assets/icons/tile-ultralytics.svg" width="48" alt="Ultralytics YOLO">
+*also: Whisper*
 
 **Agents & tooling**
+<img src="assets/icons/tile-claude.svg" width="48" alt="Claude"> <img src="assets/icons/tile-cursor.svg" width="48" alt="Cursor"> <img src="assets/icons/tile-mcp.svg" width="48" alt="MCP">
 Claude Code · Cursor · OpenCode · MCP · LSP · sub-agents · model routing
 
 **Backend & data**
@@ -52,12 +54,11 @@ Claude Code · Cursor · OpenCode · MCP · LSP · sub-agents · model routing
 
 **Infra & cloud**
 ![Infra](https://skillicons.dev/icons?i=docker,nginx,aws,cloudflare,firebase,vercel,git,github,githubactions,linux,bash,npm,pnpm&theme=dark)
-*also: Slurm · S3 · WAF · MongoDB aggregation · caching*
+<img src="assets/icons/tile-slurm.png" width="48" alt="Slurm">
+*also: S3 · WAF · MongoDB aggregation · caching*
 
 **Computer vision**
 RTSP · YOLO · OPENCV · real-time video pipelines · local GPU inference
-
----
 
 ## What I do
 
