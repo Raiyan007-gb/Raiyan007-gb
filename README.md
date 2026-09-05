@@ -26,6 +26,23 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 
 > **Everything after the model works is the actual job.**
 
+## What I do
+
+| Area | Focus |
+|---|---|
+| AI Systems | LLM-powered software, end to end |
+| LLM Infrastructure | Inference, serving, optimization |
+| Agentic AI | Agents that operate software |
+| Computer Vision | Real-time video, local inference |
+| Speech AI | STT / TTS, Whisper tuning |
+| Bangla AI | AI that works in Bangla, not just English |
+| Backend Engineering | APIs, data pipelines, scale |
+| Full-Stack Systems | Next.js + FastAPI production apps |
+| GPU Computing | CUDA, Slurm clusters, memory tuning |
+| Research | EMNLP 2026 · IJCNN 2025 · LLM evaluation |
+| Production Infrastructure | AWS, caching, observability |
+| Developer Tooling | MCP servers, agent skills, CLIs |
+
 ## Currently
 
 - Tuning 256K-context serving for Qwen3.8-27B across Slurm-managed GPU nodes
@@ -36,33 +53,83 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 
 ## Flagship systems
 
-**Long-context LLM inference.** Qwen3.8-27B served at 256K context on Slurm-managed GPU nodes, tuned for concurrent batching and memory headroom.
-`agent / client → OpenAI-compatible API → vLLM / SGLang → Qwen3.8-27B → GPU cluster (Slurm)`
-32 concurrent sequences · BF16 · 90% GPU utilization
+### Long-context LLM inference
 
-**Agentic dev environment.** Infrastructure that lets coding agents operate software directly instead of just suggesting code: a shared message bus, one canonical config store, and a skill library wired into every harness.
-`developer → coding agent → MCP / LSP → tools + codebase → test → deploy`
-[agentmesh](https://github.com/Raiyan007-gb/agentmesh) · [relays](https://github.com/Raiyan007-gb/relays) · [skills](https://github.com/Raiyan007-gb/skills) · [opensrc](https://github.com/Raiyan007-gb/opensrc)
+```bash
+MAX_MODEL_LEN=262144   # 256K long-context serving
+MAX_NUM_SEQS=32         # concurrent request batching
+GPU_UTIL=0.90           # high memory utilization
+DTYPE=bfloat16          # BF16 inference
+```
 
-**Camera-to-dashboard.** Real-time video analytics — RTSP camera networks over PoE, local GPU inference, and a web dashboard — with published CV research behind the vision work.
-`IP cameras (RTSP) → PoE network → local GPU → CV inference → analytics → dashboard`
-[LTIC-Herb, IJCNN 2025](https://github.com/Raiyan007-gb/LTIC-Herb)
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#17212B','primaryTextColor':'#F5F5F5','primaryBorderColor':'#3E8E7E','lineColor':'#3E8E7E','secondaryColor':'#1C2530','tertiaryColor':'#1C2530'}}}%%
+flowchart TD
+    A[User / Agent] --> B[Claude Code / API client]
+    B --> C[OpenAI-compatible API]
+    C --> D[vLLM / SGLang]
+    D --> E[Qwen3.8-27B]
+    E --> F[GPU infrastructure · Slurm]
+```
+
+I work on the infrastructure side of modern LLMs, not just API calls: long-context inference, high-throughput serving, concurrent request batching, GPU memory optimization, quantization and FP4 experiments, CUDA troubleshooting, Slurm-based clusters, large-memory inference environments.
+
+### Agent loop
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#17212B','primaryTextColor':'#F5F5F5','primaryBorderColor':'#3E8E7E','lineColor':'#3E8E7E','secondaryColor':'#1C2530','tertiaryColor':'#1C2530'}}}%%
+flowchart TD
+    A[Developer] --> B[AI coding agent]
+    B --> C[MCP / LSP]
+    C --> D[Tools + codebase]
+    D --> E[Testing / debugging]
+    E --> F[Deployment]
+```
+
+I build systems where AI interacts with and operates software, not chatbots around it, but agents inside the loop:
+
+- **[agentmesh](https://github.com/Raiyan007-gb/agentmesh)** — local message bus, task queue and shared memory turning isolated Claude Code / OpenCode sessions into a coordinated multi-agent platform (13 MCP tools)
+- **[relays](https://github.com/Raiyan007-gb/relays)** — one canonical `~/.agents` store (Tauri + Rust) wiring MCP servers, skills and plugins into every harness via junctions/symlinks
+- **[skills](https://github.com/Raiyan007-gb/skills)** — Claude Code skill collection: evidence-driven testing, worktree isolation, review loops
+- **[opensrc](https://github.com/Raiyan007-gb/opensrc)** — Rust CLI giving coding agents instant access to any npm/PyPI/crates.io package source
+
+### Camera-to-dashboard
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#17212B','primaryTextColor':'#F5F5F5','primaryBorderColor':'#3E8E7E','lineColor':'#3E8E7E','secondaryColor':'#1C2530','tertiaryColor':'#1C2530'}}}%%
+flowchart TD
+    A[IP cameras · RTSP] --> B[PoE network]
+    B --> C[Router / network layer]
+    C --> D[Local GPU machine]
+    D --> E[CV inference]
+    E --> F[Analytics]
+    F --> G[Web dashboard]
+```
+
+Real-time video systems with local GPU inference, cameras to dashboard. Published CV research alongside the production work:
+
+- **[LTIC-Herb](https://github.com/Raiyan007-gb/LTIC-Herb)** (IJCNN 2025) — three-stage transformer classifier for long-tailed herbarium species; state of the art on Herbarium 2021/2022 across few/medium/many-shot splits
 
 ## Systems I build and run
 
-| System | What it does | Stack | Status |
-|---|---|---|---|
-| U-Lens / UBL Admin Platform | Production admin portal for dashboards, attendance, POSM inventory, and SKU reporting on live databases | MongoDB · AWS S3 · WAF · Firebase | 🟢 Active |
-| Bangla AI & speech | Smart-home assistant, Whisper fine-tuning, Bangla–English RAG with evaluation | Whisper · FAISS · LangChain · Flask | 🟢 Active · [repo](https://github.com/Raiyan007-gb/multilingual_rag_system_md._shoaib_ahmed) |
-| AI Photodrive | AI-assisted photo/drive platform: API, frontends, Runpod pipelines | Python · TypeScript | 🔵 Stable |
-| LTIC-Herb | Three-stage CLIP-ViT classifier, state of the art on Herbarium 2021/2022 | PyTorch · CLIP-ViT | 🔵 Stable · [repo](https://github.com/Raiyan007-gb/LTIC-Herb) · [paper](https://ieeexplore.ieee.org/abstract/document/11228538/) |
-| SSH Transfer Pro | DevOps desktop app: SSH/SFTP browser, transfer engines, signed installers | Electron · ssh2 · NSIS | ⚪ Shipped · [repo](https://github.com/Raiyan007-gb/SSH-Transfer-Pro) · [download](https://github.com/Raiyan007-gb/SSH-Transfer-Pro/releases/tag/v2.8.4) |
+| System | Function | Stack | Status | Access |
+|---|---|---|---|---|
+| Long-context LLM inference | Qwen3.8-27B served with 262K context, tuned batching and GPU utilization on RTX 6000-class Slurm hardware | vLLM · SGLang · BF16 · CUDA · Slurm | 🟢 Active | Private infra |
+| U-Lens / UBL Admin Platform | Production admin portal: dashboards, attendance, POSM inventory + town/CM summaries, SKU reporting, PJP upload, large-scale reporting on live databases | MongoDB aggregation · AWS · S3 · WAF · Firebase · caching | 🟢 Active | Private production system |
+| AI surveillance / CV platform | RTSP camera networks → PoE → local GPU inference → analytics → web dashboard; CV/AI lead on enterprise systems | Python · RTSP · GPU inference · dashboards | 🟢 Active | Private systems |
+| Bangla AI & speech | Bangla Smart Home Assistant, Bangla STT/TTS research, Whisper fine-tuning, Bangla–English RAG with evaluation | Whisper · FAISS · LangChain · Flask | 🟢 Active | [repo](https://github.com/Raiyan007-gb/multilingual_rag_system_md._shoaib_ahmed) |
+| Agentic dev environment | A2S multi-agent message bus + canonical `~/.agents` harness manager (Tauri/Rust) + Claude Code skills + npm-source CLI for coding agents | MCP · Rust · Tauri · Python | 🟢 Active | [agentmesh](https://github.com/Raiyan007-gb/agentmesh) · [relays](https://github.com/Raiyan007-gb/relays) · [skills](https://github.com/Raiyan007-gb/skills) · [opensrc](https://github.com/Raiyan007-gb/opensrc) |
+| AI Photodrive | AI-assisted photo/drive platform (API + frontends + Runpod pipelines) | Python · TypeScript · notebooks | 🔵 Stable | Private system |
+| LTIC-Herb | 3-stage CLIP-ViT long-tail classifier, SOTA on Herbarium 2021/2022 (IJCNN 2025) | PyTorch · CLIP-ViT · transformers | 🔵 Stable | [repo](https://github.com/Raiyan007-gb/LTIC-Herb) · [paper](https://ieeexplore.ieee.org/abstract/document/11228538/) |
+| SSH Transfer Pro | DevOps desktop app: SSH/SFTP browser, Tar/SFTP/SCP engines, native terminal launcher, signed installers | Electron · ssh2 · NSIS | ⚪ Deployed | [repo](https://github.com/Raiyan007-gb/SSH-Transfer-Pro) · [download](https://github.com/Raiyan007-gb/SSH-Transfer-Pro/releases/tag/v2.8.4) |
+
+Additional production areas: Bangla Smart Home Assistant · Bangla speech recognition and Whisper fine-tuning · Bangla STT/TTS research with modern open speech models.
 
 ## Research
 
 > **Evaluating Second-Order Bias of LLMs Through Epistemic Entitlement** — accepted, EMNLP 2026
 > Ramaravind Kommiya Mothilal, Terry Jingchen Zhang, **Raiyan Ahmed**, Zhijing Jin, Shion Guha, Syed Ishtiaque Ahmed
-> [arXiv:2606.17506](https://arxiv.org/abs/2606.17506)
+> [arXiv:2606.17506](https://arxiv.org/abs/2606.17506) · code and dataset: pending publication
 
 | Work | Area | Links |
 |---|---|---|
@@ -95,7 +162,26 @@ Large language models, model architecture, efficient inference, AI systems, quan
 **Infra & cloud**
 ![Docker](https://img.shields.io/badge/Docker-17212B?style=flat-square&logo=docker&logoColor=3E8E7E) ![Nginx](https://img.shields.io/badge/Nginx-17212B?style=flat-square&logo=nginx&logoColor=3E8E7E) ![AWS](https://img.shields.io/badge/AWS-17212B?style=flat-square&logo=amazonaws&logoColor=3E8E7E) ![Vercel](https://img.shields.io/badge/Vercel-17212B?style=flat-square&logo=vercel&logoColor=3E8E7E) ![Firebase](https://img.shields.io/badge/Firebase-17212B?style=flat-square&logo=firebase&logoColor=3E8E7E) ![Slurm](https://img.shields.io/badge/Slurm-17212B?style=flat-square) ![Linux](https://img.shields.io/badge/Linux-17212B?style=flat-square&logo=linux&logoColor=3E8E7E)
 
+*(AWS here spans S3 and WAF · U-Lens also layers in request caching on top of MongoDB aggregation.)*
+
 **Computer vision** — YOLO · RTSP · real-time video pipelines · local GPU inference
+
+## Philosophy
+
+I don't just experiment with models. I care about what happens after the model works: deployment, latency, memory, throughput, tool use, observability, integration, reliability, production.
+
+## Evolution
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#17212B','primaryTextColor':'#F5F5F5','primaryBorderColor':'#3E8E7E','lineColor':'#3E8E7E','secondaryColor':'#1C2530','tertiaryColor':'#1C2530'}}}%%
+flowchart LR
+    A[Software Engineering] --> B[AI / ML]
+    B --> C[Computer Vision]
+    C --> D[Production AI Systems]
+    D --> E[LLM Infrastructure]
+    E --> F[Agentic AI]
+    F --> G[AI Research]
+```
 
 ## GitHub activity
 
