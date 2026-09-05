@@ -34,20 +34,98 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 
 ## What I do
 
-| Area | Focus |
-|---|---|
-| AI Systems | LLM-powered software, end to end |
-| LLM Infrastructure | Inference, serving, optimization |
-| Agentic AI | Agents that operate software |
-| Computer Vision | Real-time video, local inference |
-| Speech AI | STT / TTS, Whisper tuning |
-| Bangla AI | AI that works in Bangla, not just English |
-| Backend Engineering | APIs, data pipelines, scale |
-| Full-Stack Systems | Next.js + FastAPI production apps |
-| GPU Computing | CUDA, Slurm clusters, memory tuning |
-| Research | EMNLP 2026 · IJCNN 2025 · LLM evaluation |
-| Production Infrastructure | AWS, caching, observability |
-| Developer Tooling | MCP servers, agent skills, CLIs |
+<table width="100%">
+<tr align="center">
+<td width="25%">
+
+**🧠 AI Systems**
+
+<sub>LLM-powered software, end to end</sub>
+
+</td>
+<td width="25%">
+
+**⚙️ LLM Infrastructure**
+
+<sub>Inference, serving, optimization</sub>
+
+</td>
+<td width="25%">
+
+**🤖 Agentic AI**
+
+<sub>Agents that operate software</sub>
+
+</td>
+<td width="25%">
+
+**👁️ Computer Vision**
+
+<sub>Real-time video, local inference</sub>
+
+</td>
+</tr>
+<tr align="center">
+<td>
+
+**🎙️ Speech AI**
+
+<sub>STT / TTS, Whisper tuning</sub>
+
+</td>
+<td>
+
+**🇧🇩 Bangla AI**
+
+<sub>AI that works in Bangla, not just English</sub>
+
+</td>
+<td>
+
+**🔧 Backend Engineering**
+
+<sub>APIs, data pipelines, scale</sub>
+
+</td>
+<td>
+
+**🖥️ Full-Stack Systems**
+
+<sub>Next.js + FastAPI production apps</sub>
+
+</td>
+</tr>
+<tr align="center">
+<td>
+
+**⚡ GPU Computing**
+
+<sub>CUDA, Slurm clusters, memory tuning</sub>
+
+</td>
+<td>
+
+**🔬 Research**
+
+<sub>EMNLP 2026 · IJCNN 2025 · LLM evaluation</sub>
+
+</td>
+<td>
+
+**☁️ Production Infrastructure**
+
+<sub>AWS, caching, observability</sub>
+
+</td>
+<td>
+
+**🧰 Developer Tooling**
+
+<sub>MCP servers, agent skills, CLIs</sub>
+
+</td>
+</tr>
+</table>
 
 ## Currently
 
@@ -57,32 +135,41 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 - Running CV analytics on live RTSP camera networks for enterprise deployments
 - Co-author on an EMNLP 2026 paper on second-order bias in LLM epistemic judgments
 
-<!-- Highlights: keep exactly 2 cards, always the 2 projects most recently pushed to.
-     Pull each project's own logo straight from its repo (assets/logo.svg, assets/logo.png,
-     or an icon referenced in its README) when one exists; if a project has no logo, drop the
-     image and keep the text cell. Swap cards out as newer pushes replace these. -->
+<!-- Highlights: featured project cards. Pull each project's own logo straight from its
+     repo (assets/logo.svg, assets/logo.png, or an icon referenced in its README) when one
+     exists; if a project has no logo, drop the image and keep the text cell. Update the set
+     as work progresses — swap in newer pushes, or feature a project worth calling out. -->
 ## Highlights
 
-*What I've pushed to most recently.*
+*What I've pushed to most recently — plus a few worth calling out.*
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
-<img src="https://github.com/Raiyan007-gb/dsh-remote-tunnel-easy/raw/main/assets/logo.svg" width="180" alt="dsh-remote-tunnel-easy logo" />
+<img src="https://github.com/Raiyan007-gb/dsh-remote-tunnel-easy/raw/main/assets/logo.svg" width="140" alt="dsh-remote-tunnel-easy logo" />
 
 **[dsh-remote-tunnel-easy](https://github.com/Raiyan007-gb/dsh-remote-tunnel-easy)**
 
 QR-code remote handoff for DeepSeek Harness: scan a code in Settings and your phone opens the same live session through a Cloudflare quick tunnel, no database, no app install. `v1.4.2`
 
 </td>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
-<img src="https://github.com/Raiyan007-gb/relays/raw/main/src-tauri/icons/icon.png" width="120" alt="relays logo" />
+<img src="https://github.com/Raiyan007-gb/relays/raw/main/src-tauri/icons/icon.png" width="100" alt="relays logo" />
 
 **[relays](https://github.com/Raiyan007-gb/relays)**
 
 One canonical `~/.agents` store for every AI harness — Claude Code, Cursor, Codex, OpenCode, Kiro — wired into each via junctions/symlinks from a single Tauri desktop app. In active development.
+
+</td>
+<td width="33%" valign="top">
+
+<img src="https://github.com/Raiyan007-gb/SSH-Transfer-Pro/raw/main/assets/logo.png" width="100" alt="SSH Transfer Pro logo" />
+
+**[SSH Transfer Pro](https://github.com/Raiyan007-gb/SSH-Transfer-Pro)**
+
+Dark, keyboard-friendly Electron workstation for moving files over SSH: drill into a remote server, exclude what you don't need, then pull it down via Tar streaming, SFTP, or SCP — plus a one-click native terminal and OS-keychain credential storage. `v2.8.4`
 
 </td>
 </tr>
