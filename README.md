@@ -36,7 +36,7 @@ I build AI systems end to end — GPU-level inference, agent infrastructure, com
 
 **AI / ML**
 ![AI/ML](https://skillicons.dev/icons?i=py,pytorch&theme=dark)
-<img src="assets/icons/tile-huggingface.svg" width="48" alt="HuggingFace Transformers"> <img src="assets/icons/tile-onnx.svg" width="48" alt="ONNX"> <img src="assets/icons/tile-vllm.png" width="48" alt="vLLM"> <img src="assets/icons/tile-sglang.svg" width="48" alt="SGLang"> <img src="assets/icons/tile-qwen.svg" width="48" alt="Qwen"> <img src="assets/icons/tile-openrouter.svg" width="48" alt="OpenRouter"> <img src="assets/icons/tile-ultralytics.svg" width="48" alt="Ultralytics YOLO">
+<img src="assets/icons/tile-huggingface.svg" width="48" alt="HuggingFace Transformers"> <img src="assets/icons/tile-onnx.svg" width="48" alt="ONNX"> <img src="assets/icons/tile-vllm.png" width="48" alt="vLLM"> <img src="assets/icons/tile-sglang.svg" width="48" alt="SGLang"> <img src="assets/icons/tile-qwen.svg" width="48" alt="Qwen"> <img src="assets/icons/tile-openrouter.svg" width="48" alt="OpenRouter">
 *also: Whisper*
 
 **Agents & tooling**
@@ -58,7 +58,9 @@ Claude Code · Cursor · OpenCode · MCP · LSP · sub-agents · model routing
 *also: S3 · WAF · MongoDB aggregation · caching*
 
 **Computer vision**
-RTSP · YOLO · OPENCV · real-time video pipelines · local GPU inference
+![CV](https://skillicons.dev/icons?i=opencv&theme=dark)
+<img src="assets/icons/tile-ultralytics.svg" width="48" alt="Ultralytics YOLO">
+RTSP · YOLO · OpenCV · real-time video pipelines · local GPU inference
 
 ## What I do
 
@@ -266,14 +268,14 @@ Real-time video systems with local GPU inference, cameras to dashboard. Publishe
 
 | System | Function | Stack | Status | Access |
 |---|---|---|---|---|
-| Long-context LLM inference | Qwen3.8-27B served with 262K context, tuned batching and GPU utilization on RTX 6000-class Slurm hardware | vLLM · SGLang · BF16 · CUDA · Slurm | 🟢 Active | Private infra |
-| U-Lens / UBL Admin Platform | Production admin portal: dashboards, attendance, POSM inventory + town/CM summaries, SKU reporting, PJP upload, large-scale reporting on live databases | MongoDB aggregation · AWS · S3 · WAF · Firebase · caching | 🟢 Active | Private production system |
-| AI surveillance / CV platform | RTSP camera networks → PoE → local GPU inference → analytics → web dashboard; CV/AI lead on enterprise systems | Python · RTSP · GPU inference · dashboards | 🟢 Active | Private systems |
-| Bangla AI & speech | Bangla Smart Home Assistant, Bangla STT/TTS research, Whisper fine-tuning, Bangla–English RAG with evaluation | Whisper · FAISS · LangChain · Flask | 🟢 Active | [repo](https://github.com/Raiyan007-gb/multilingual_rag_system_md._shoaib_ahmed) |
-| Agentic dev environment | A2S multi-agent message bus + canonical `~/.agents` harness manager (Tauri/Rust) + Claude Code skills + npm-source CLI for coding agents | MCP · Rust · Tauri · Python | 🟢 Active | [agentmesh](https://github.com/Raiyan007-gb/agentmesh) · [relays](https://github.com/Raiyan007-gb/relays) · [skills](https://github.com/Raiyan007-gb/skills) · [opensrc](https://github.com/Raiyan007-gb/opensrc) |
-| AI Photodrive | AI-assisted photo/drive platform (API + frontends + Runpod pipelines) | Python · TypeScript · notebooks | 🔵 Stable | Private system |
-| LTIC-Herb | 3-stage CLIP-ViT long-tail classifier, SOTA on Herbarium 2021/2022 (IJCNN 2025) | PyTorch · CLIP-ViT · transformers | 🔵 Stable | [repo](https://github.com/Raiyan007-gb/LTIC-Herb) · [paper](https://ieeexplore.ieee.org/abstract/document/11228538/) |
-| SSH Transfer Pro | DevOps desktop app: SSH/SFTP browser, Tar/SFTP/SCP engines, native terminal launcher, signed installers | Electron · ssh2 · NSIS | ⚪ Deployed | [repo](https://github.com/Raiyan007-gb/SSH-Transfer-Pro) · [download](https://github.com/Raiyan007-gb/SSH-Transfer-Pro/releases/tag/v2.8.4) |
+| Long-context LLM inference | Qwen3.8-27B served with 262K context, tuned batching and GPU utilization on RTX 6000-class Slurm hardware | vLLM · SGLang · BF16 · CUDA · Slurm | `ACTIVE` | Private infra |
+| U-Lens / UBL Admin Platform | Production admin portal: dashboards, attendance, POSM inventory + town/CM summaries, SKU reporting, PJP upload, large-scale reporting on live databases | MongoDB aggregation · AWS · S3 · WAF · Firebase · caching | `ACTIVE` | Private production system |
+| AI surveillance / CV platform | RTSP camera networks → PoE → local GPU inference → analytics → web dashboard; CV/AI lead on enterprise systems | Python · RTSP · GPU inference · dashboards | `ACTIVE` | Private systems |
+| Bangla AI & speech | Bangla Smart Home Assistant, Bangla STT/TTS research, Whisper fine-tuning, Bangla–English RAG with evaluation | Whisper · FAISS · LangChain · Flask | `ACTIVE` | [repo](https://github.com/Raiyan007-gb/multilingual_rag_system_md._shoaib_ahmed) |
+| Agentic dev environment | A2S multi-agent message bus + canonical `~/.agents` harness manager (Tauri/Rust) + Claude Code skills + npm-source CLI for coding agents | MCP · Rust · Tauri · Python | `ACTIVE` | [agentmesh](https://github.com/Raiyan007-gb/agentmesh) · [relays](https://github.com/Raiyan007-gb/relays) · [skills](https://github.com/Raiyan007-gb/skills) · [opensrc](https://github.com/Raiyan007-gb/opensrc) |
+| AI Photodrive | AI-assisted photo/drive platform (API + frontends + Runpod pipelines) | Python · TypeScript · notebooks | `STABLE` | Private system |
+| LTIC-Herb | 3-stage CLIP-ViT long-tail classifier, SOTA on Herbarium 2021/2022 (IJCNN 2025) | PyTorch · CLIP-ViT · transformers | `STABLE` | [repo](https://github.com/Raiyan007-gb/LTIC-Herb) · [paper](https://ieeexplore.ieee.org/abstract/document/11228538/) |
+| SSH Transfer Pro | DevOps desktop app: SSH/SFTP browser, Tar/SFTP/SCP engines, native terminal launcher, signed installers | Electron · ssh2 · NSIS | `DEPLOYED` | [repo](https://github.com/Raiyan007-gb/SSH-Transfer-Pro) · [download](https://github.com/Raiyan007-gb/SSH-Transfer-Pro/releases/tag/v2.8.4) |
 
 Additional production areas: Bangla Smart Home Assistant · Bangla speech recognition and Whisper fine-tuning · Bangla STT/TTS research with modern open speech models.
 
