@@ -55,7 +55,7 @@ Claude Code · Cursor · OpenCode · MCP · LSP · sub-agents · model routing
 *also: Slurm · S3 · WAF · MongoDB aggregation · caching*
 
 **Computer vision**
-RTSP · YOLO · real-time video pipelines · local GPU inference
+RTSP · YOLO · OPENCV · real-time video pipelines · local GPU inference
 
 ---
 
