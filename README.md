@@ -4,7 +4,7 @@
 
 <img src="assets/tdi-logo.png" width="190" alt="The Data Island">
 
-**Director of Engineering · Senior AI Lead — [The Data Island](https://www.thedataisland.com/)**
+**Head of AI · Senior AI Lead — [The Data Island](https://www.thedataisland.com/)**
 
 <img src="assets/nsu-logo.png" width="150" alt="North South University">
 
