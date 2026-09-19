@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:17212B,100:3E8E7E&height=180&section=header&text=Raiyan%20Ahmed&fontSize=40&fontColor=F5F5F5&fontAlignY=35&animation=fadeIn&desc=SeniorAI%20Systems%20Engineer%20%C2%B7%20LLM%20Infrastructure%20%C2%B7%20Agentic%20AI&descAlignY=62&descSize=16&descColor=F5F5F5" width="100%" alt="Raiyan Ahmed" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:17212B,100:3E8E7E&height=180&section=header&text=Raiyan%20Ahmed&fontSize=40&fontColor=F5F5F5&fontAlignY=35&animation=fadeIn&desc=Senior%20AI%20Systems%20Engineer%20%C2%B7%20LLM%20Infrastructure%20%C2%B7%20Agentic%20AI&descAlignY=62&descSize=16&descColor=F5F5F5" width="100%" alt="Raiyan Ahmed" />
 
 <img src="assets/tdi-logo.png" width="190" alt="The Data Island">
 
