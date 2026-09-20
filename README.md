@@ -389,7 +389,7 @@ flowchart LR
     F --> G[AI Research]
 ```
 
-## GitHub activity
+<!-- ## GitHub activity
 
 <div align="center">
 
@@ -397,7 +397,7 @@ flowchart LR
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Raiyan007-gb&layout=compact&hide_border=true&title_color=3E8E7E&text_color=F5F5F5&bg_color=17212B" alt="Top languages" />
 
 </div>
-
+-->
 <!-- lowlighter/metrics renders (isocalendar + achievements) live in
      .github/workflows/metrics.yml — add a METRICS_TOKEN repo secret and run
      the Metrics workflow, then uncomment:
